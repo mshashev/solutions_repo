@@ -19,16 +19,17 @@ ${\large \textbf{ Here\;are\;some\;differential\;equations\;for\;horizontal\;mot
 
 
 1. **Constant Velocity:**
+   
    $$\frac{d^2 x}{dt^2} = 0$$
 
-2. **Motion with Constant Acceleration:**
+3. **Motion with Constant Acceleration:**
    $$\frac{d^2 x}{dt^2} = a$$
 
 
-3. **Motion with Air Resistance (Proportional to Velocity):**
+4. **Motion with Air Resistance (Proportional to Velocity):**
    $$m \frac{d^2 x}{dt^2} = -k \frac{dx}{dt}$$
 
-4. **Projectile Motion (Horizontal Component):**
+5. **Projectile Motion (Horizontal Component):**
    $$\frac{d^2 x}{dt^2} = 0$$
 
 
