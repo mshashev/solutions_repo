@@ -48,16 +48,6 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#dependence-of-range-on-angle-of-projection">Dependence of Range on Angle of Projection</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#impact-of-other-parameters-on-the-range">Impact of Other Parameters on the Range</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#1-effect-of-initial-velocity-v_0">1. Effect of Initial Velocity ($ v_0 $)</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#2-influence-of-gravitational-acceleration-g">2. Influence of Gravitational Acceleration ($ g $)</a>
-</li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -182,81 +172,93 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
-<div class="arithmatex">\[
-{\Large \textbf{Theoretical\;\;Foundation}}:\;{\large \textbf{Deriving\;the\;Governing\;Equations\;of Motion}}
-\]</div>
+<h1 id="investigating-the-range-as-a-function-of-the-angle-of-projection">Investigating the Range as a Function of the Angle of Projection</h1>
+<h2 id="deriving-the-governing-equations-of-motion">Deriving the Governing Equations of Motion</h2>
 <p>Projectile motion can be described by breaking the motion into horizontal and vertical components, governed by Newton's laws and the influence of gravity.</p>
-<p><span class="arithmatex">\({\large \textbf{Horisontal\; Motion:}}\)</span></p>
-<p>In the absence of horizontal forces (air resistance is neglected), the horizontal velocity remains constant: <span class="arithmatex">\(<span class="arithmatex">\({\large v_x=v_0 \cos(\theta)}\)</span>\)</span></p>
-<p>From this formula we could express horizontal position as a function of time:
-<span class="arithmatex">\(<span class="arithmatex">\({\large x(t)=v_0 \cos(\theta)t}\)</span>\)</span></p>
-<p><span class="arithmatex">\({\large \textbf{ Here\;are\;some\;differential\;equations\;for\;horizontal\;motion:}}\)</span></p>
+<h2 id="horizontal-motion">Horizontal Motion:</h2>
+<p>In the absence of horizontal forces (air resistance is neglected), the horizontal velocity remains constant: </p>
+<h2 id="v_xv_0-costheta">$$ v_x=v_0 \cos(\theta)$$</h2>
+<p>From this formula we could express horizontal position as a function of time:</p>
+<h2 id="xtv_0-costhetat"><span class="arithmatex">\(<span class="arithmatex">\(x(t)=v_0 \cos(\theta)t\)</span>\)</span></h2>
+<h2 id="here-are-some-differential-equations-for-horizontal-motion">Here are some differential equations for horizontal motion:</h2>
 <ol>
-<li><strong>Constant Velocity:</strong></li>
+<li>
+<h4 id="constant-velocity">Constant Velocity:</h4>
+</li>
 </ol>
 <p><span class="arithmatex">\(<span class="arithmatex">\(\frac{d^2 x}{dt^2} = 0\)</span>\)</span></p>
 <ol>
 <li>
-<p><strong>Motion with Constant Acceleration:</strong>
-<span class="arithmatex">\(<span class="arithmatex">\(\frac{d^2 x}{dt^2} = a\)</span>\)</span></p>
-</li>
-<li>
-<p><strong>Motion with Air Resistance (Proportional to Velocity):</strong>
-<span class="arithmatex">\(<span class="arithmatex">\(m \frac{d^2 x}{dt^2} = -k \frac{dx}{dt}\)</span>\)</span></p>
-</li>
-<li>
-<p><strong>Projectile Motion (Horizontal Component):</strong>
-<span class="arithmatex">\(<span class="arithmatex">\(\frac{d^2 x}{dt^2} = 0\)</span>\)</span></p>
+<h4 id="motion-with-constant-acceleration">Motion with Constant Acceleration:</h4>
 </li>
 </ol>
-<p><span class="arithmatex">\({\large \textbf{Vertical\;Motion:}}\)</span></p>
-<p>The vertical velocity is affected by gravity: <span class="arithmatex">\(<span class="arithmatex">\({\large v_y(t)=v_0 \sin(\theta)-gt}\)</span>\)</span></p>
-<p>The vertical position is:<span class="arithmatex">\(<span class="arithmatex">\({\large y(t)=v_0\sin(\theta)t-\frac{1}{2}gt^2}\)</span>\)</span></p>
-<p><span class="arithmatex">\({\large \textbf{ Here\;are\;some\;differential\;equations\;for\;vertical\;motion:}}\)</span></p>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\frac{d^2 x}{dt^2} = a\)</span>\)</span></p>
 <ol>
 <li>
-<p><strong>Free Fall (No Air Resistance):</strong>
-<span class="arithmatex">\(<span class="arithmatex">\(\frac{d^2 y}{dt^2} = -g\)</span>\)</span></p>
-</li>
-<li>
-<p><strong>Motion with Constant Acceleration (Upward or Downward):</strong>
-<span class="arithmatex">\(<span class="arithmatex">\(\frac{d^2 y}{dt^2} = a\)</span>\)</span></p>
-</li>
-<li>
-<p><strong>Motion with Air Resistance (Proportional to the Square of Velocity):</strong>
-<span class="arithmatex">\(<span class="arithmatex">\(m \frac{d^2 y}{dt^2} = -mg - k \left( \frac{dy}{dt} \right)^2\)</span>\)</span></p>
-</li>
-<li>
-<p><strong>Projectile Motion (Vertical Component):</strong>
-<span class="arithmatex">\(<span class="arithmatex">\(\frac{d^2 y}{dt^2} = -g\)</span>\)</span></p>
+<h4 id="motion-with-air-resistance-proportional-to-velocity">Motion with Air Resistance (Proportional to Velocity):</h4>
 </li>
 </ol>
-<p><span class="arithmatex">\({\Large\textbf{Analysis\;of\;the\;Range:}}\)</span></p>
-<h3 id="dependence-of-range-on-angle-of-projection"><strong>Dependence of Range on Angle of Projection</strong></h3>
+<p><span class="arithmatex">\(<span class="arithmatex">\(m \frac{d^2 x}{dt^2} = -k \frac{dx}{dt}\)</span>\)</span></p>
+<ol>
+<li>
+<h4 id="projectile-motion-horizontal-component">Projectile Motion (Horizontal Component):</h4>
+</li>
+</ol>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\frac{d^2 x}{dt^2} = 0\)</span>\)</span></p>
+<h2 id="vertical-motion">Vertical motion:</h2>
+<p>The vertical velocity is affected by gravity:</p>
+<p><span class="arithmatex">\(<span class="arithmatex">\({\large v_y(t)=v_0 \sin(\theta)-gt}\)</span>\)</span></p>
+<p>The vertical position is:</p>
+<div class="arithmatex">\[{\large y(t)=v_0\sin(\theta)t-\frac{1}{2}gt^2}\]</div>
+<h3 id="here-are-some-differential-equations-for-vertical-motion">Here are some differential equations for vertical motion:</h3>
+<ol>
+<li>
+<h4 id="free-fall-no-air-resistance">Free Fall (No Air Resistance):</h4>
+</li>
+</ol>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\frac{d^2 y}{dt^2} = -g\)</span>\)</span></p>
+<ol>
+<li>
+<h4 id="motion-with-constant-acceleration-upward-or-downward">Motion with Constant Acceleration (Upward or Downward):</h4>
+</li>
+</ol>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\frac{d^2 y}{dt^2} = a\)</span>\)</span></p>
+<ol>
+<li>
+<h4 id="motion-with-air-resistance-proportional-to-the-square-of-velocity">Motion with Air Resistance (Proportional to the Square of Velocity):</h4>
+</li>
+</ol>
+<p><span class="arithmatex">\(<span class="arithmatex">\(m \frac{d^2 y}{dt^2} = -mg - k \left( \frac{dy}{dt} \right)^2\)</span>\)</span></p>
+<ol>
+<li>
+<h4 id="projectile-motion-vertical-component">Projectile Motion (Vertical Component):</h4>
+</li>
+</ol>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\frac{d^2 y}{dt^2} = -g\)</span>\)</span></p>
+<h2 id="analasys-of-the-range">Analasys of the range:</h2>
+<h3 id="dependence-of-range-on-angle-of-projection">Dependence of Range on Angle of Projection</h3>
 <p>The range ($ R $) of a projectile is the total horizontal distance it covers before returning to the initial vertical level. Using kinematic equations and assuming air resistance is negligible, the range is given by:  </p>
-<div class="arithmatex">\[
-R = \frac{v_0^2 \sin(2\theta)}{g}
-\]</div>
+<div class="arithmatex">\[R = \frac{v_0^2 \sin(2\theta)}{g}\]</div>
 <p>From this equation, we observe that:  </p>
 <ul>
 <li>The range depends on the sine of twice the launch angle ($ 2\theta $).  </li>
 <li>It reaches its <strong>maximum value</strong> when $ \sin(2\theta) = 1 $, which occurs at $ \theta = 45^\circ $.  </li>
 <li>At <strong>0° and 90°</strong>, $ \sin(2\theta) = 0 $, resulting in no horizontal range.  </li>
 </ul>
-<h3 id="impact-of-other-parameters-on-the-range"><strong>Impact of Other Parameters on the Range</strong></h3>
-<h4 id="1-effect-of-initial-velocity-v_0"><strong>1. Effect of Initial Velocity ($ v_0 $)</strong></h4>
+<h3 id="impact-of-other-parameters-on-the-range">Impact of Other Parameters on the Range</h3>
+<h4 id="1-effect-of-initial-velocity-v_0">1. Effect of Initial Velocity ($ v_0 $)</h4>
 <ul>
 <li>The range is <strong>proportional to the square</strong> of the initial velocity ($ v_0^2 $).  </li>
 <li>Increasing $ v_0 $ leads to a significantly larger range, while decreasing $ v_0 $ reduces the distance traveled.  </li>
 <li>Example: Doubling $ v_0 $ results in a fourfold increase in range.  </li>
 </ul>
-<h4 id="2-influence-of-gravitational-acceleration-g"><strong>2. Influence of Gravitational Acceleration ($ g $)</strong></h4>
+<h4 id="2-influence-of-gravitational-acceleration-g">2. Influence of Gravitational Acceleration ($ g $)</h4>
 <ul>
 <li>Since $ g $ appears in the denominator, a <strong>higher gravitational acceleration</strong> results in a <strong>shorter range</strong>.  </li>
 <li>In environments with lower gravity (e.g., the Moon), the projectile travels much farther.  </li>
 <li>Example: The same projectile launched on Earth and on the Moon (where $ g_{\text{Moon}} \approx \frac{1}{6} g_{\text{Earth}} $) would cover <strong>six times the range</strong> on the Moon.</li>
 </ul>
-<p><strong><em>Here is a projection</em></strong></p>
+<h3 id="here-is-a-projection">Here is a projection</h3>
 <p><a href="https://colab.research.google.com/drive/1JHPUWgxSt2TDCQFSSGbUghf_WDlvIvPt#scrollTo=vkCIj7YxY8HU">Открыть в Google Colab</a></p>
 <p><img alt="alt text" src="../image-2.png"/></p>
 </div>
