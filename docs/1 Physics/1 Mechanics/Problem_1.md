@@ -102,7 +102,7 @@ $$
 
 ### Dependence of Range on Angle of Projection  
 
-The range ($ R $) of a projectile is the total horizontal distance it covers before returning to the initial vertical level. Using kinematic equations and assuming air resistance is negligible, the range is given by:  
+The range ($R$) of a projectile is the total horizontal distance it covers before returning to the initial vertical level. Using kinematic equations and assuming air resistance is negligible, the range is given by:  
 
 $$
 R = \frac{v_0^2 \sin(2\theta)}{g}
@@ -110,23 +110,21 @@ $$
 
 From this equation, we observe that:  
 
-- The range depends on the sine of twice the launch angle $
-2\theta
-$.  
-- It reaches its maximum value when $ \sin(2\theta) = 1 $, which occurs at $ \theta = 45^\circ $.  
-- At 0° and 90°, $ \sin(2\theta) = 0 $, resulting in no horizontal range.  
+- The range depends on the sine of twice the launch angle $2\theta$.  
+- It reaches its maximum value when $\sin(2\theta) = 1$, which occurs at $\theta = 45^\circ$.  
+- At 0° and 90°, $\sin(2\theta) = 0$, resulting in no horizontal range.  
 
 ### Impact of Other Parameters on the Range  
 
-#### 1. Effect of Initial Velocity ($ v_0 $) 
-- The range is proportional to the square of the initial velocity ($ v_0^2 $).  
-- Increasing $ v_0 $ leads to a significantly larger range, while decreasing $ v_0 $ reduces the distance traveled.  
-- Example: Doubling $ v_0 $ results in a fourfold increase in range.  
+#### 1. Effect of Initial Velocity ($v_0$) 
+- The range is proportional to the square of the initial velocity ($v_0^2$).  
+- Increasing $v_0$ leads to a significantly larger range, while decreasing $v_0$ reduces the distance traveled.  
+- Example: Doubling $v_0$ results in a fourfold increase in range.  
 
 #### 2. Influence of Gravitational Acceleration ($ g $)
-- Since $ g $ appears in the denominator, a higher gravitational acceleration results in a shorter range.  
+- Since $g$ appears in the denominator, a higher gravitational acceleration results in a shorter range.  
 - In environments with lower gravity (e.g., the Moon), the projectile travels much farther.  
-- Example: The same projectile launched on Earth and on the Moon (where $ g_{\text{Moon}} \approx \frac{1}{6} g_{\text{Earth}} $) would cover six times the range on the Moon.
+- Example: The same projectile launched on Earth and on the Moon (where $g_{\text{Moon}} \approx \frac{1}{6} g_{\text{Earth}}$) would cover six times the range on the Moon.
 
 ### Here is a projection
 
