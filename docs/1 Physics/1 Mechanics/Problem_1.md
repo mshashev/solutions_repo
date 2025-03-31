@@ -145,4 +145,3 @@ Projectile motion isn’t just physics—it’s the hidden MVP in real-world fea
 4. **Space**: Rockets soar and Mars landers touch down via calculated arcs.  
 5. **Entertainment**: Movie stunts and game physics pop with projectile-powered realism.
 
-From hoops to Hollywood, it’s the science behind the spectacle. What’s your favorite example?
