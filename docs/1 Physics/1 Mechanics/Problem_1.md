@@ -9,6 +9,14 @@
 
 Projectile motion can be described by breaking the motion into horizontal and vertical components, governed by Newton's laws and the influence of gravity.
 
+**Newton's Laws and Projectile Motion:**
+
+* **Newton's First Law (Inertia):**
+    * An object resists changes in its motion. Without horizontal forces (neglecting air resistance), a projectile's horizontal velocity remains constant.
+* **Newton's Second Law (F=ma):**
+    * Force causes acceleration. Gravity is the dominant force in projectile motion, acting downwards. This leads to a constant downward acceleration, affecting the vertical velocity.
+* **Combined Effect:**
+    * These laws create independent horizontal (constant velocity) and vertical (changing velocity due to gravity) motions. This combination results in the characteristic parabolic path of a projectile.
 
 
 ## Horizontal Motion:
@@ -49,11 +57,7 @@ $$
    m \frac{d^2 x}{dt^2} = -k \frac{dx}{dt}
    $$
 
-4. #### Projectile Motion (Horizontal Component):
 
-   $$
-   \frac{d^2 x}{dt^2} = 0
-   $$
 
 ![alt text](image-3.png)
 [Animation](https://colab.research.google.com/drive/1bJJS1KM194uaMRDyOWEmM7HYhq3j4Rjy#scrollTo=YE-9bsZXhoIS&line=63&uniqifier=1)
@@ -92,11 +96,7 @@ $$
    m \frac{d^2 y}{dt^2} = -mg - k \left( \frac{dy}{dt} \right)^2
    $$
 
-4. #### Projectile Motion (Vertical Component):
 
-   $$
-   \frac{d^2 y}{dt^2} = -g
-   $$
 
 ![alt text](image.png)
 [Animation](https://colab.research.google.com/drive/1Vsmp81DaA9eMY0aogXAYvMaahPNyGoIi#scrollTo=R9LMeK2RaiXx&line=109&uniqifier=1)
