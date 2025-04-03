@@ -58,8 +58,8 @@ $$
    $$
 
 
+![alt text](image-7.png)
 
-![alt text](image-4.png)
 [Animation](https://colab.research.google.com/drive/1RcZfYU5tV7yyyJe2KxKH1uHv9u4l62KB#scrollTo=K6d_ygYxr-u3&line=205&uniqifier=1)
 
 ## Vertical motion:
@@ -96,8 +96,8 @@ $$
    m \frac{d^2 y}{dt^2} = -mg - k \left( \frac{dy}{dt} \right)^2
    $$
 
+![alt text](image-6.png)
 
-![alt text](image-5.png)
 
 [Animation](https://colab.research.google.com/drive/1Vsmp81DaA9eMY0aogXAYvMaahPNyGoIi#scrollTo=bKUs-FUzuEoJ&line=181&uniqifier=1)
 
