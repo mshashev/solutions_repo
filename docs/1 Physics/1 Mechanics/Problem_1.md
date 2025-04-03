@@ -59,8 +59,8 @@ $$
 
 
 
-![alt text](image-3.png)
-[Animation](https://colab.research.google.com/drive/1bJJS1KM194uaMRDyOWEmM7HYhq3j4Rjy#scrollTo=YE-9bsZXhoIS&line=63&uniqifier=1)
+![alt text](image-4.png)
+[Animation](https://colab.research.google.com/drive/1RcZfYU5tV7yyyJe2KxKH1uHv9u4l62KB#scrollTo=K6d_ygYxr-u3&line=205&uniqifier=1)
 
 ## Vertical motion:
 
@@ -97,9 +97,9 @@ $$
    $$
 
 
+![alt text](image-5.png)
 
-![alt text](image.png)
-[Animation](https://colab.research.google.com/drive/1Vsmp81DaA9eMY0aogXAYvMaahPNyGoIi#scrollTo=R9LMeK2RaiXx&line=109&uniqifier=1)
+[Animation](https://colab.research.google.com/drive/1Vsmp81DaA9eMY0aogXAYvMaahPNyGoIi#scrollTo=bKUs-FUzuEoJ&line=181&uniqifier=1)
 
 ## Analasys of the range:
 
