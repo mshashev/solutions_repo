@@ -20,11 +20,7 @@ Here's what each term represents:
 - **$A \cos(\omega t)$**: The external forcing term, with amplitude $A$ and angular frequency $\omega$.
 
 
-<div style="display: flex; justify-content: center; gap: 10px;">
-<img src="image-9.png" alt="Image 1" width="280"/>
-<img src="image-10.png" alt="Image 2" width="280"/>
-</div>
-
+![alt text](image-13.png)
 
 
 ##  Derive the Approximate Solutions for Small-Angle Oscillations
@@ -89,10 +85,7 @@ The homogeneous part decays, leaving the steady-state solution $\theta_p(t)$.
 
 ---
 
-<div style="display: flex; justify-content: center; gap: 10px;">
-<img src="image-8.png" alt="Image 1" width="280"/>
-<img src="image-11.png" alt="Image 2" width="280"/>
-</div>
+![alt text](image-14.png)
 
 
 This plot directly visualizes your derived solution, showing the transient (decaying) and steady-state (oscillatory) components.
@@ -135,7 +128,7 @@ $$
  **Lower damping** ($b$ small) → **Higher amplitude** near resonance.
 
 ---
-
+![alt text](image-15.png)
 ### Energy Implications
 
 #### 1. Energy Input vs Dissipation
@@ -166,7 +159,7 @@ $$
 → **Maximum average energy** occurs near resonance, where $D$ is largest.
 
 ---
-
+![alt text](image-16.png)
 ### Practical Impacts
 
 - **Large oscillations** near resonance can be dangerous (e.g., bridges, machines).
