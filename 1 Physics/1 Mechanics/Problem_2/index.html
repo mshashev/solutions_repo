@@ -172,6 +172,131 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h1 id="investigating-the-dynamics-of-a-forced-damped-pendulum">Investigating the Dynamics of a Forced Damped Pendulum</h1>
+<h2 id="start-with-the-differential-equation">Start with the Differential Equation</h2>
+<p>The given equation for the motion of a forced damped pendulum is:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + b \frac{d\theta}{dt} + \frac{g}{L} \sin\theta = A \cos(\omega t)
+\]</div>
+<p>Here's what each term represents:</p>
+<ul>
+<li><strong><span class="arithmatex">\(\theta\)</span></strong>: The angular displacement of the pendulum from the vertical (in radians).</li>
+<li><strong><span class="arithmatex">\(\frac{d^2\theta}{dt^2}\)</span></strong>: The angular acceleration.</li>
+<li><strong><span class="arithmatex">\(b \frac{d\theta}{dt}\)</span></strong>: The damping term, where <span class="arithmatex">\(b\)</span> is the damping coefficient (friction or resistance).</li>
+<li><strong><span class="arithmatex">\(\frac{g}{L} \sin\theta\)</span></strong>: The gravitational restoring force, where <span class="arithmatex">\(g\)</span> is the acceleration due to gravity, <span class="arithmatex">\(L\)</span> is the length of the pendulum, and <span class="arithmatex">\(\sin\theta\)</span> accounts for the nonlinear restoring force.</li>
+<li><strong><span class="arithmatex">\(A \cos(\omega t)\)</span></strong>: The external forcing term, with amplitude <span class="arithmatex">\(A\)</span> and angular frequency <span class="arithmatex">\(\omega\)</span>.</li>
+</ul>
+<div style="display: flex; justify-content: center; gap: 10px;">
+<img alt="Image 1" src="image-9.png" width="280"/>
+<img alt="Image 2" src="image-10.png" width="280"/>
+</div>
+<h2 id="derive-the-approximate-solutions-for-small-angle-oscillations">Derive the Approximate Solutions for Small-Angle Oscillations</h2>
+<p>For small angles, approximate <span class="arithmatex">\(\sin\theta \approx \theta\)</span>. The given equation:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + b \frac{d\theta}{dt} + \frac{g}{L} \sin\theta = A \cos(\omega t)
+\]</div>
+<p>becomes a linear equation:</p>
+<div class="arithmatex">\[
+\ddot{\theta} + b \dot{\theta} + \omega_0^2 \theta = A \cos(\omega t)
+\]</div>
+<p>where <span class="arithmatex">\(\omega_0 = \sqrt{\frac{g}{L}}\)</span> is the natural frequency.</p>
+<h3 id="solving-the-equation">Solving the Equation</h3>
+<p>The solution is the sum of the homogeneous (<span class="arithmatex">\(\theta_h\)</span>) and particular (<span class="arithmatex">\(\theta_p\)</span>) solutions.</p>
+<h4 id="homogeneous-solution">Homogeneous Solution</h4>
+<p>Solve the homogeneous part: <span class="arithmatex">\(\ddot{\theta} + b \dot{\theta} + \omega_0^2 \theta = 0\)</span>. The characteristic equation is <span class="arithmatex">\(r^2 + b r + \omega_0^2 = 0\)</span>, with roots <span class="arithmatex">\(r = \frac{-b \pm \sqrt{b^2 - 4\omega_0^2}}{2}\)</span>. For the underdamped case (<span class="arithmatex">\(b^2 &lt; 4\omega_0^2\)</span>), the solution is:</p>
+<div class="arithmatex">\[
+\theta_h(t) = e^{-\frac{b}{2}t} \left( C_1 \cos(\omega_d t) + C_2 \sin(\omega_d t) \right)
+\]</div>
+<p>where <span class="arithmatex">\(\omega_d = \sqrt{\omega_0^2 - \frac{b^2}{4}}\)</span>. This part decays over time due to damping.</p>
+<h4 id="particular-solution">Particular Solution</h4>
+<p>For the forcing term <span class="arithmatex">\(A \cos(\omega t)\)</span>, assume <span class="arithmatex">\(\theta_p(t) = B \cos(\omega t) + C \sin(\omega t)\)</span>. Substitute into the equation, equate coefficients of <span class="arithmatex">\(\cos(\omega t)\)</span> and <span class="arithmatex">\(\sin(\omega t)\)</span>, and solve:</p>
+<div class="arithmatex">\[
+B (\omega_0^2 - \omega^2) + C (b \omega) = A, \quad -B (b \omega) + C (\omega_0^2 - \omega^2) = 0
+\]</div>
+<p>Solving gives:</p>
+<div class="arithmatex">\[
+B = A \frac{\omega_0^2 - \omega^2}{(\omega_0^2 - \omega^2)^2 + (b \omega)^2}, \quad C = A \frac{b \omega}{(\omega_0^2 - \omega^2)^2 + (b \omega)^2}
+\]</div>
+<p>Rewrite as <span class="arithmatex">\(\theta_p(t) = D \cos(\omega t - \phi)\)</span>, where:</p>
+<div class="arithmatex">\[
+D = \frac{A}{\sqrt{(\omega_0^2 - \omega^2)^2 + (b \omega)^2}}, \quad \tan \phi = \frac{b \omega}{\omega_0^2 - \omega^2}
+\]</div>
+<h4 id="general-solution">General Solution</h4>
+<p>The full solution is:</p>
+<div class="arithmatex">\[
+\theta(t) = e^{-\frac{b}{2}t} \left( C_1 \cos(\omega_d t) + C_2 \sin(\omega_d t) \right) + \frac{A}{\sqrt{(\omega_0^2 - \omega^2)^2 + (b \omega)^2}} \cos(\omega t - \phi)
+\]</div>
+<p>The homogeneous part decays, leaving the steady-state solution <span class="arithmatex">\(\theta_p(t)\)</span>.</p>
+<hr/>
+<div style="display: flex; justify-content: center; gap: 10px;">
+<img alt="Image 1" src="image-8.png" width="280"/>
+<img alt="Image 2" src="image-11.png" width="280"/>
+</div>
+<p>This plot directly visualizes your derived solution, showing the transient (decaying) and steady-state (oscillatory) components.</p>
+<h2 id="resonance-and-energy-in-a-forced-damped-pendulum">Resonance and Energy in a Forced Damped Pendulum</h2>
+<p>In a <strong>forced damped pendulum</strong> (small-angle approximation), <strong>resonance</strong> governs long-term behavior and energy dynamics.</p>
+<h3 id="resonance-condition">Resonance Condition</h3>
+<p>Resonance arises when the <strong>driving frequency</strong> <span class="arithmatex">\(\omega\)</span> matches the <strong>natural frequency</strong> <span class="arithmatex">\(\omega_0\)</span> of the undamped system:</p>
+<div class="arithmatex">\[
+\omega_0 = \sqrt{\frac{g}{L}}
+\]</div>
+<p>In a <strong>damped</strong> system, the peak response occurs slightly <strong>below</strong> the natural frequency:</p>
+<div class="arithmatex">\[
+\omega_{\text{res}} = \sqrt{\omega_0^2 - \frac{b^2}{2}}
+\]</div>
+<hr/>
+<h3 id="amplitude-at-resonance">Amplitude at Resonance</h3>
+<p>The amplitude <span class="arithmatex">\(D(\omega)\)</span> of the steady-state oscillation is:</p>
+<div class="arithmatex">\[
+D(\omega) = \frac{A}{\sqrt{(\omega_0^2 - \omega^2)^2 + (b \omega)^2}}
+\]</div>
+<p>At resonance:</p>
+<div class="arithmatex">\[
+D_{\text{max}} \approx \frac{A}{b \omega_0} \quad \text{(when } b \ll \omega_0 \text{)}
+\]</div>
+<p><strong>Lower damping</strong> (<span class="arithmatex">\(b\)</span> small) → <strong>Higher amplitude</strong> near resonance.</p>
+<hr/>
+<h3 id="energy-implications">Energy Implications</h3>
+<h4 id="1-energy-input-vs-dissipation">1. Energy Input vs Dissipation</h4>
+<ul>
+<li>The <strong>external force</strong> supplies energy continuously.</li>
+<li><strong>Damping</strong> dissipates it (e.g., via friction).</li>
+<li>In <strong>steady state</strong>, energy input equals energy loss.</li>
+</ul>
+<h4 id="2-energy-stored-in-oscillations">2. Energy Stored in Oscillations</h4>
+<p>Total energy (approximate):</p>
+<div class="arithmatex">\[
+E(t) = \frac{1}{2} I \dot{\theta}^2 + \frac{1}{2} I \omega_0^2 \theta^2
+\]</div>
+<p>Substitute <span class="arithmatex">\(\theta(t) = D \cos(\omega t - \phi)\)</span>:</p>
+<div class="arithmatex">\[
+E(t) = \frac{1}{2} I \omega^2 D^2 \sin^2(\omega t - \phi) + \frac{1}{2} I \omega_0^2 D^2 \cos^2(\omega t - \phi)
+\]</div>
+<p>Average energy over a period <span class="arithmatex">\(T = \frac{2\pi}{\omega}\)</span>:</p>
+<div class="arithmatex">\[
+\langle E \rangle = \frac{1}{4} I D^2 (\omega^2 + \omega_0^2)
+\]</div>
+<p>→ <strong>Maximum average energy</strong> occurs near resonance, where <span class="arithmatex">\(D\)</span> is largest.</p>
+<hr/>
+<h3 id="practical-impacts">Practical Impacts</h3>
+<ul>
+<li><strong>Large oscillations</strong> near resonance can be dangerous (e.g., bridges, machines).</li>
+<li>Engineers use <strong>controlled damping</strong> to:</li>
+<li>Avoid resonance disasters</li>
+<li>Tune systems that benefit from resonance (e.g., musical instruments).</li>
+</ul>
+<hr/>
+<h3 id="summary">Summary</h3>
+<ul>
+<li>Resonance: <span class="arithmatex">\(\omega \approx \omega_0\)</span></li>
+<li>At resonance:</li>
+<li><strong>Amplitude</strong> and <strong>average energy</strong> peak</li>
+<li>Risk increases if damping is <strong>too low</strong></li>
+<li>In steady state:</li>
+<li><strong>Energy in = Energy out</strong></li>
+</ul>
+<hr/>
+<p><img alt="alt text" src="../image-12.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
