@@ -88,7 +88,19 @@ The homogeneous part decays, leaving the steady-state solution $\theta_p(t)$.
 ![alt text](image-14.png)
 
 
-This plot directly visualizes your derived solution, showing the transient (decaying) and steady-state (oscillatory) components.
+This plot directly visualizes derived solution, showing the transient (decaying) and steady-state (oscillatory) components.
+
+## 3. Comparison of Pendulum Scenarios 
+
+- The plot compares their time evolution numerically, using the full nonlinear equation for accuracy.
+
+![alt text](image-18.png)
+
+
+
+
+
+The time plot (top) shows: (1) the pure pendulum oscillates with constant amplitude, (2) the damped pendulum decays exponentially, (3) the forced pendulum exhibits sustained resonance, and (4) the forced damped case settles into a steady-state oscillation after transient decay. The phase portraits (bottom) reveal: (1) a closed orbit for the pure pendulum, indicating energy conservation; (2) a spiral to the origin for the damped case, showing energy dissipation; (3) a larger repeating orbit for the forced case, driven by external energy; and (4) a transition to a limit cycle for the forced damped case, balancing input and dissipation.
 ## Resonance and Energy in a Forced Damped Pendulum
 
 In a **forced damped pendulum** (small-angle approximation), **resonance** governs long-term behavior and energy dynamics.
