@@ -1,5 +1,5 @@
 # Problem 2
-## Escape Velocities and Cosmic Velocities
+### Escape Velocities and Cosmic Velocities
 
 ### 1. Definitions and Physical Meaning
 
@@ -208,7 +208,7 @@ We calculate $v_1$, $v_2$, and $v_3$ for Earth, Mars, Jupiter, and the Moon usin
 
 ---
 
-## 4. Visualization and Data Comparison
+### 4. Visualization and Data Comparison
 
 Below is a table summarizing the cosmic velocities for Earth, Mars, Jupiter, and the Moon:
 
