@@ -9,7 +9,7 @@ To derive the relationship between the square of the orbital period ($T^2$) and 
 
     $\frac{G M m}{r^2} = \frac{m v^2}{r}$.  
 
-   Cancel $m$ and multiply by $r$: 
+   Cancel $m$ and multiply by $r$:
 
     $\frac{G M}{r} = v^2$.
 
