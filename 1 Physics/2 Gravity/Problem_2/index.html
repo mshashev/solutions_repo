@@ -58,6 +58,26 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#escape-velocities-and-cosmic-velocities">Escape Velocities and Cosmic Velocities</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-definitions-and-physical-meaning">1. Definitions and Physical Meaning</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-mathematical-derivations">2. Mathematical Derivations</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-calculations-for-celestial-bodies">3. Calculations for Celestial Bodies</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#earth">Earth</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#mars">Mars</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#jupiter">Jupiter</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#moon">Moon</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-visualization-and-data-comparison">4. Visualization and Data Comparison</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_3/">Problem 3</a>
@@ -172,8 +192,8 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
-<h1 id="escape-velocities-and-cosmic-velocities">Escape Velocities and Cosmic Velocities</h1>
-<h2 id="1-definitions-and-physical-meaning">1. Definitions and Physical Meaning</h2>
+<h2 id="escape-velocities-and-cosmic-velocities">Escape Velocities and Cosmic Velocities</h2>
+<h3 id="1-definitions-and-physical-meaning">1. Definitions and Physical Meaning</h3>
 <ul>
 <li>
 <p><strong>First Cosmic Velocity (<span class="arithmatex">\(v_1\)</span>)</strong>: The orbital velocity required for an object to maintain a stable, circular low orbit around a celestial body, just above its surface (neglecting atmospheric drag). It is the speed needed to achieve a satellite orbit, balancing gravitational pull with centripetal force. For Earth, this is the speed for low Earth orbit (LEO) satellites.</p>
@@ -186,330 +206,10 @@
 </li>
 </ul>
 <hr/>
-<h2 id="2-mathematical-derivations">2. Mathematical Derivations</h2>
+<h3 id="2-mathematical-derivations">2. Mathematical Derivations</h3>
 <p>Below are the derivations for each cosmic velocity, based on fundamental physics principles (Newtonian gravity and conservation of energy).</p>
 <hr/>
-<h3 id="first-cosmic-velocity-v_1">First Cosmic Velocity (<span class="arithmatex">\(v_1\)</span>)</h3>
-<p>The first cosmic velocity is the speed for a circular orbit near the surface of a celestial body. In a circular orbit, the gravitational force provides the centripetal force required for circular motion.</p>
-<ul>
-<li>
-<p><strong>Gravitational force</strong>:
-  <span class="arithmatex">\(<span class="arithmatex">\(F_g=\frac{GMm}{r^2}\)</span>\)</span>
-  where <span class="arithmatex">\(G\)</span> is the gravitational constant (<span class="arithmatex">\(6.67430\times10^{-11}\text{m}^3\text{kg}^{-1}\text{s}^{-2}\)</span>), <span class="arithmatex">\(M\)</span> is the mass of the celestial body, <span class="arithmatex">\(m\)</span> is the mass of the orbiting object, and <span class="arithmatex">\(r\)</span> is the radius of the orbit (approximately the body’s radius for surface-level orbits).</p>
-</li>
-<li>
-<p><strong>Centripetal force</strong> for circular motion:
-  <span class="arithmatex">\(<span class="arithmatex">\(F_c=\frac{mv_1^2}{r}\)</span>\)</span>
-  where <span class="arithmatex">\(v_1\)</span> is the orbital velocity.</p>
-</li>
-<li>
-<p>Equate the forces:
-  <span class="arithmatex">\(<span class="arithmatex">\(\frac{GMm}{r^2}=\frac{mv_1^2}{r}\)</span>\)</span></p>
-</li>
-<li>
-<p>Cancel <span class="arithmatex">\(m\)</span> (mass of the orbiting object) and simplify:
-  <span class="arithmatex">\(<span class="arithmatex">\(\frac{GM}{r^2}=\frac{v_1^2}{r}\)</span>\)</span></p>
-</li>
-<li>
-<p>Multiply through by <span class="arithmatex">\(r\)</span>:
-  <span class="arithmatex">\(<span class="arithmatex">\(\frac{GM}{r}=v_1^2\)</span>\)</span></p>
-</li>
-<li>
-<p>Solve for <span class="arithmatex">\(v_1\)</span>:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_1=\sqrt{\frac{GM}{r}}\)</span>\)</span></p>
-</li>
-<li>
-<p>Alternatively, express in terms of surface gravity <span class="arithmatex">\(g=\frac{GM}{r^2}\)</span>, so <span class="arithmatex">\(GM=gr^2\)</span>. Substitute:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_1=\sqrt{\frac{gr^2}{r}}=\sqrt{gr}\)</span>\)</span></p>
-</li>
-</ul>
-<p><strong>Physical Insight</strong>: <span class="arithmatex">\(v_1\)</span> depends on the celestial body’s mass and radius, reflecting the balance between gravity and orbital motion.</p>
-<hr/>
-<h3 id="second-cosmic-velocity-v_2">Second Cosmic Velocity (<span class="arithmatex">\(v_2\)</span>)</h3>
-<p>The second cosmic velocity is the escape velocity, derived using conservation of mechanical energy. An object escaping to infinity has zero total mechanical energy at infinity (kinetic energy = 0, potential energy = 0).</p>
-<ul>
-<li><strong>Total mechanical energy</strong> at the surface (initial state):</li>
-<li>Kinetic energy: <span class="arithmatex">\(K=\frac{1}{2}mv_2^2\)</span></li>
-<li>Gravitational potential energy: <span class="arithmatex">\(U=-\frac{GMm}{r}\)</span></li>
-<li>
-<p>Total energy: <span class="arithmatex">\(E_i=\frac{1}{2}mv_2^2-\frac{GMm}{r}\)</span></p>
-</li>
-<li>
-<p><strong>At infinity</strong> (final state, where <span class="arithmatex">\(r\to\infty\)</span>):</p>
-</li>
-<li>Kinetic energy: <span class="arithmatex">\(K=0\)</span> (velocity = 0 at infinity, minimum case)</li>
-<li>Potential energy: <span class="arithmatex">\(U=0\)</span> (since <span class="arithmatex">\(U=-\frac{GMm}{r}\to0\)</span>)</li>
-<li>
-<p>Total energy: <span class="arithmatex">\(E_f=0\)</span></p>
-</li>
-<li>
-<p>Conservation of energy (<span class="arithmatex">\(E_i=E_f\)</span>):
-  <span class="arithmatex">\(<span class="arithmatex">\(\frac{1}{2}mv_2^2-\frac{GMm}{r}=0\)</span>\)</span></p>
-</li>
-<li>
-<p>Cancel <span class="arithmatex">\(m\)</span> and simplify:
-  <span class="arithmatex">\(<span class="arithmatex">\(\frac{1}{2}v_2^2=\frac{GM}{r}\)</span>\)</span></p>
-</li>
-<li>
-<p>Multiply by 2:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_2^2=\frac{2GM}{r}\)</span>\)</span></p>
-</li>
-<li>
-<p>Solve for <span class="arithmatex">\(v_2\)</span>:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_2=\sqrt{\frac{2GM}{r}}\)</span>\)</span></p>
-</li>
-<li>
-<p>Using <span class="arithmatex">\(g=\frac{GM}{r^2}\)</span>, so <span class="arithmatex">\(GM=gr^2\)</span>:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_2=\sqrt{\frac{2gr^2}{r}}=\sqrt{2gr}\)</span>\)</span></p>
-</li>
-<li>
-<p>Relationship with <span class="arithmatex">\(v_1\)</span>:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_2=\sqrt{2}\cdot v_1\)</span>\)</span>
-  (since <span class="arithmatex">\(v_1=\sqrt{\frac{GM}{r}}\)</span>, and <span class="arithmatex">\(v_2=\sqrt{\frac{2GM}{r}}\)</span>).</p>
-</li>
-</ul>
-<p><strong>Physical Insight</strong>: Escape velocity is higher than orbital velocity, requiring enough energy to overcome the gravitational potential well.</p>
-<hr/>
-<h3 id="third-cosmic-velocity-v_3">Third Cosmic Velocity (<span class="arithmatex">\(v_3\)</span>)</h3>
-<p>The third cosmic velocity is the speed required to escape the Sun’s gravitational influence, starting from the surface of a planet (e.g., Earth). This involves escaping the planet’s gravity and then achieving escape velocity from the Sun’s gravity at the planet’s orbital distance.</p>
-<ul>
-<li>
-<p><strong>Step 1: Escape the planet’s gravity</strong>:
-  The object needs at least the second cosmic velocity (<span class="arithmatex">\(v_2=\sqrt{\frac{2GM_p}{r_p}}\)</span>) to escape the planet (mass <span class="arithmatex">\(M_p\)</span>, radius <span class="arithmatex">\(r_p\)</span>).</p>
-</li>
-<li>
-<p><strong>Step 2: Escape the Sun’s gravity</strong>:
-  At the planet’s orbital distance from the Sun (<span class="arithmatex">\(R\)</span>, e.g., 1 AU for Earth), the object must achieve the escape velocity from the Sun’s gravitational field:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_{\text{esc,Sun}}=\sqrt{\frac{2GM_s}{R}}\)</span>\)</span>
-  where <span class="arithmatex">\(M_s\)</span> is the Sun’s mass (<span class="arithmatex">\(1.989\times10^{30}\text{kg}\)</span>).</p>
-</li>
-<li>
-<p><strong>Orbital velocity of the planet</strong>:
-  The planet orbits the Sun at velocity <span class="arithmatex">\(v_{\text{orb}}\)</span>, derived from circular orbit dynamics:
-  <span class="arithmatex">\(<span class="arithmatex">\(\frac{GM_s}{R^2}=\frac{v_{\text{orb}}^2}{R}\implies v_{\text{orb}}^2=\frac{GM_s}{R}\implies v_{\text{orb}}=\sqrt{\frac{GM_s}{R}}\)</span>\)</span></p>
-</li>
-<li>
-<p><strong>Total velocity required</strong>:
-  After escaping the planet, the object is at the planet’s orbital distance, moving at the planet’s orbital velocity <span class="arithmatex">\(v_{\text{orb}}\)</span>. To escape the Sun, it needs an additional velocity to reach <span class="arithmatex">\(v_{\text{esc,Sun}}\)</span>. The velocity relative to the Sun after escaping the planet is:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_{\text{rel}}=\sqrt{v_2^2+v_{\text{orb}}^2}\)</span>\)</span>
-  However, the precise derivation for <span class="arithmatex">\(v_3\)</span> assumes the object must achieve <span class="arithmatex">\(v_{\text{esc,Sun}}\)</span> relative to the Sun. The additional velocity needed beyond <span class="arithmatex">\(v_{\text{orb}}\)</span>:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_{\text{add}}=v_{\text{esc,Sun}}-v_{\text{orb}}\)</span>\)</span></p>
-</li>
-<li>
-<p><strong>Simplified <span class="arithmatex">\(v_3\)</span></strong>:
-  For Earth, the third cosmic velocity is often approximated by considering the total energy to escape both Earth and the Sun. A practical formula, accounting for Earth’s orbital velocity and escape requirements, is derived numerically or via energy considerations. The approximate formula for <span class="arithmatex">\(v_3\)</span> (from Earth’s surface to escape the Solar System) is:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_3\approx\sqrt{v_2^2+(v_{\text{esc,Sun}}-v_{\text{orb}})^2}\)</span>\)</span>
-  However, standard references provide:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_3\approx\sqrt{\frac{2GM_s}{R}+v_2^2}\)</span>\)</span></p>
-</li>
-</ul>
-<p>This is complex, so we compute numerically below using known values.</p>
-<p><strong>Physical Insight</strong>: <span class="arithmatex">\(v_3\)</span> accounts for escaping two gravitational fields, making it significantly higher than <span class="arithmatex">\(v_2\)</span>.</p>
-<hr/>
-<p><img alt="alt text" src="../image-2.png"/></p>
-<h2 id="3-calculations-for-celestial-bodies">3. Calculations for Celestial Bodies</h2>
-<p>We calculate <span class="arithmatex">\(v_1\)</span>, <span class="arithmatex">\(v_2\)</span>, and <span class="arithmatex">\(v_3\)</span> for Earth, Mars, Jupiter, and the Moon using the derived formulas. Below are the parameters:</p>
-<table>
-<thead>
-<tr>
-<th><strong>Body</strong></th>
-<th><strong>Mass (<span class="arithmatex">\(M\)</span>, kg)</strong></th>
-<th><strong>Radius (<span class="arithmatex">\(r\)</span>, m)</strong></th>
-<th><strong>Surface Gravity (<span class="arithmatex">\(g\)</span>, m/s²)</strong></th>
-<th><strong>Orbital Distance from Sun (<span class="arithmatex">\(R\)</span>, m)</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Earth</td>
-<td><span class="arithmatex">\(5.972\times10^{24}\)</span></td>
-<td><span class="arithmatex">\(6.371\times10^6\)</span></td>
-<td>9.81</td>
-<td><span class="arithmatex">\(1.496\times10^{11}\)</span> (1 AU)</td>
-</tr>
-<tr>
-<td>Mars</td>
-<td><span class="arithmatex">\(6.417\times10^{23}\)</span></td>
-<td><span class="arithmatex">\(3.389\times10^6\)</span></td>
-<td>3.71</td>
-<td><span class="arithmatex">\(2.279\times10^{11}\)</span></td>
-</tr>
-<tr>
-<td>Jupiter</td>
-<td><span class="arithmatex">\(1.898\times10^{27}\)</span></td>
-<td><span class="arithmatex">\(6.991\times10^7\)</span></td>
-<td>24.79</td>
-<td><span class="arithmatex">\(7.785\times10^{11}\)</span></td>
-</tr>
-<tr>
-<td>Moon</td>
-<td><span class="arithmatex">\(7.346\times10^{22}\)</span></td>
-<td><span class="arithmatex">\(1.737\times10^6\)</span></td>
-<td>1.62</td>
-<td>(Orbit around Earth, not Sun)</td>
-</tr>
-<tr>
-<td>Sun</td>
-<td><span class="arithmatex">\(1.989\times10^{30}\)</span></td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<h3 id="earth">Earth</h3>
-<ul>
-<li>
-<p><strong>First Cosmic Velocity</strong>:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_1=\sqrt{gr}=\sqrt{9.81\cdot6.371\times10^6}\approx\sqrt{6.25\times10^7}\approx7.91\text{km/s}\)</span>\)</span></p>
-</li>
-<li>
-<p><strong>Second Cosmic Velocity</strong>:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_2=\sqrt{2gr}=\sqrt{2\cdot9.81\cdot6.371\times10^6}\approx\sqrt{1.25\times10^8}\approx11.19\text{km/s}\)</span>\)</span></p>
-</li>
-<li>
-<p><strong>Third Cosmic Velocity</strong>:</p>
-</li>
-<li>Sun’s escape velocity at 1 AU:
-    <span class="arithmatex">\(<span class="arithmatex">\(v_{\text{esc,Sun}}=\sqrt{\frac{2GM_s}{R}}=\sqrt{\frac{2\cdot6.67430\times10^{-11}\cdot1.989\times10^{30}}{1.496\times10^{11}}}\approx42.1\text{km/s}\)</span>\)</span></li>
-<li>Earth’s orbital velocity:
-    <span class="arithmatex">\(<span class="arithmatex">\(v_{\text{orb}}=\sqrt{\frac{GM_s}{R}}=\frac{42.1}{\sqrt{2}}\approx29.8\text{km/s}\)</span>\)</span></li>
-<li>Additional velocity needed:
-    <span class="arithmatex">\(<span class="arithmatex">\(v_{\text{add}}=42.1-29.8=12.3\text{km/s}\)</span>\)</span></li>
-<li>Total <span class="arithmatex">\(v_3\)</span>:
-    <span class="arithmatex">\(<span class="arithmatex">\(v_3\approx\sqrt{v_2^2+v_{\text{add}}^2}=\sqrt{11.19^2+12.3^2}\approx\sqrt{125.2+151.3}\approx16.6\text{km/s}\)</span>\)</span></li>
-</ul>
-<hr/>
-<h3 id="mars">Mars</h3>
-<ul>
-<li>
-<p><strong>First Cosmic Velocity</strong>:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_1=\sqrt{3.71\cdot3.389\times10^6}\approx\sqrt{1.257\times10^7}\approx3.55\text{km/s}\)</span>\)</span></p>
-</li>
-<li>
-<p><strong>Second Cosmic Velocity</strong>:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_2=\sqrt{2\cdot3.71\cdot3.389\times10^6}\approx\sqrt{2.514\times10^7}\approx5.02\text{km/s}\)</span>\)</span></p>
-</li>
-<li>
-<p><strong>Third Cosmic Velocity</strong>:</p>
-</li>
-<li>Sun’s escape velocity at Mars’ distance (<span class="arithmatex">\(R=2.279\times10^{11}\text{m}\)</span>):
-    <span class="arithmatex">\(<span class="arithmatex">\(v_{\text{esc,Sun}}=\sqrt{\frac{2\cdot6.67430\times10^{-11}\cdot1.989\times10^{30}}{2.279\times10^{11}}}\approx34.1\text{km/s}\)</span>\)</span></li>
-<li>Mars’ orbital velocity:
-    <span class="arithmatex">\(<span class="arithmatex">\(v_{\text{orb}}=\sqrt{\frac{GM_s}{R}}\approx\frac{34.1}{\sqrt{2}}\approx24.1\text{km/s}\)</span>\)</span></li>
-<li>Additional velocity:
-    <span class="arithmatex">\(<span class="arithmatex">\(v_{\text{add}}=34.1-24.1=10.0\text{km/s}\)</span>\)</span></li>
-<li>Total <span class="arithmatex">\(v_3\)</span>:
-    <span class="arithmatex">\(<span class="arithmatex">\(v_3\approx\sqrt{5.02^2+10.0^2}\approx\sqrt{25.2+100}\approx11.2\text{km/s}\)</span>\)</span></li>
-</ul>
-<hr/>
-<h3 id="jupiter">Jupiter</h3>
-<ul>
-<li>
-<p><strong>First Cosmic Velocity</strong>:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_1=\sqrt{24.79\cdot6.991\times10^7}\approx\sqrt{1.733\times10^9}\approx41.6\text{km/s}\)</span>\)</span></p>
-</li>
-<li>
-<p><strong>Second Cosmic Velocity</strong>:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_2=\sqrt{2\cdot24.79\cdot6.991\times10^7}\approx\sqrt{3.466\times10^9}\approx58.9\text{km/s}\)</span>\)</span></p>
-</li>
-<li>
-<p><strong>Third Cosmic Velocity</strong>:</p>
-</li>
-<li>Sun’s escape velocity at Jupiter’s distance (<span class="arithmatex">\(R=7.785\times10^{11}\text{m}\)</span>):
-    <span class="arithmatex">\(<span class="arithmatex">\(v_{\text{esc,Sun}}=\sqrt{\frac{2\cdot6.67430\times10^{-11}\cdot1.989\times10^{30}}{7.785\times10^{11}}}\approx18.5\text{km/s}\)</span>\)</span></li>
-<li>Jupiter’s orbital velocity:
-    <span class="arithmatex">\(<span class="arithmatex">\(v_{\text{orb}}\approx\frac{18.5}{\sqrt{2}}\approx13.1\text{km/s}\)</span>\)</span></li>
-<li>Additional velocity:
-    <span class="arithmatex">\(<span class="arithmatex">\(v_{\text{add}}=18.5-13.1=5.4\text{km/s}\)</span>\)</span></li>
-<li>Total <span class="arithmatex">\(v_3\)</span>:
-    <span class="arithmatex">\(<span class="arithmatex">\(v_3\approx\sqrt{58.9^2+5.4^2}\approx\sqrt{3469+29.2}\approx59.2\text{km/s}\)</span>\)</span></li>
-</ul>
-<hr/>
-<h3 id="moon">Moon</h3>
-<ul>
-<li>
-<p><strong>First Cosmic Velocity</strong>:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_1=\sqrt{1.62\cdot1.737\times10^6}\approx\sqrt{2.814\times10^6}\approx1.68\text{km/s}\)</span>\)</span></p>
-</li>
-<li>
-<p><strong>Second Cosmic Velocity</strong>:
-  <span class="arithmatex">\(<span class="arithmatex">\(v_2=\sqrt{2\cdot1.62\cdot1.737\times10^6}\approx\sqrt{5.628\times10^6}\approx2.37\text{km/s}\)</span>\)</span></p>
-</li>
-<li>
-<p><strong>Third Cosmic Velocity</strong>: Not applicable, as the Moon orbits Earth, not the Sun directly. Escaping the Moon typically means entering Earth’s orbit or escaping Earth’s gravity, which aligns with Earth’s <span class="arithmatex">\(v_3\)</span>.</p>
-</li>
-</ul>
-<hr/>
-<h2 id="4-visualization-and-data-comparison">4. Visualization and Data Comparison</h2>
-<p>Below is a table summarizing the cosmic velocities for Earth, Mars, Jupiter, and the Moon:</p>
-<table>
-<thead>
-<tr>
-<th><strong>Body</strong></th>
-<th><strong><span class="arithmatex">\(v_1\)</span> (km/s)</strong></th>
-<th><strong><span class="arithmatex">\(v_2\)</span> (km/s)</strong></th>
-<th><strong><span class="arithmatex">\(v_3\)</span> (km/s)</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Earth</td>
-<td>7.91</td>
-<td>11.19</td>
-<td>16.6</td>
-</tr>
-<tr>
-<td>Mars</td>
-<td>3.55</td>
-<td>5.02</td>
-<td>11.2</td>
-</tr>
-<tr>
-<td>Jupiter</td>
-<td>41.6</td>
-<td>58.9</td>
-<td>59.2</td>
-</tr>
-<tr>
-<td>Moon</td>
-<td>1.68</td>
-<td>2.37</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<p><img alt="alt text" src="../image-3.png"/></p>
-<h2 id="-">---</h2>
-<h2 id="-_1">---</h2>
-<h2 id="-_2">-</h2>
-<p>-</p>
-<p>--</p>
-<h2 id="-_3">---</h2>
-<p>--</p>
-<h2 id="-_4">--</h2>
-<h2 id="-_5">-</h2>
-<h2 id="-_6">-</h2>
-<h2 id="-_7">-</h2>
-<h1 id="problem-2_1">Problem 2</h1>
-<h2 id="escape-velocities-and-cosmic-velocities_1">Escape Velocities and Cosmic Velocities</h2>
-<h3 id="1-definitions-and-physical-meaning_1">1. Definitions and Physical Meaning</h3>
-<ul>
-<li>
-<p><strong>First Cosmic Velocity (<span class="arithmatex">\(v_1\)</span>)</strong>: The orbital velocity required for an object to maintain a stable, circular low orbit around a celestial body, just above its surface (neglecting atmospheric drag). It is the speed needed to achieve a satellite orbit, balancing gravitational pull with centripetal force. For Earth, this is the speed for low Earth orbit (LEO) satellites.</p>
-</li>
-<li>
-<p><strong>Second Cosmic Velocity (<span class="arithmatex">\(v_2\)</span>)</strong>: The escape velocity required for an object to break free from a celestial body’s gravitational field, starting from its surface, and move to infinity without further propulsion. It represents the minimum speed to escape the planet’s gravity entirely, used for interplanetary missions.</p>
-</li>
-<li>
-<p><strong>Third Cosmic Velocity (<span class="arithmatex">\(v_3\)</span>)</strong>: The velocity required for an object, launched from a celestial body’s surface (e.g., Earth), to escape the gravitational influence of the central star (e.g., the Sun) and leave the star’s gravitational system (e.g., the Solar System). It is relevant for interstellar travel.</p>
-</li>
-</ul>
-<hr/>
-<h3 id="2-mathematical-derivations_1">2. Mathematical Derivations</h3>
-<p>Below are the derivations for each cosmic velocity, based on fundamental physics principles (Newtonian gravity and conservation of energy).</p>
-<hr/>
-<h4 id="first-cosmic-velocity-v_2">First Cosmic Velocity (<span class="arithmatex">\(v_1\)</span>)</h4>
+<h4 id="first-cosmic-velocity-v_1">First Cosmic Velocity (<span class="arithmatex">\(v_1\)</span>)</h4>
 <p>The first cosmic velocity is the speed for a circular orbit near the surface of a celestial body. In a circular orbit, the gravitational force provides the centripetal force required for circular motion.</p>
 <ul>
 <li>
@@ -545,7 +245,7 @@
 </ul>
 <p><strong>Physical Insight</strong>: <span class="arithmatex">\(v_1\)</span> depends on the celestial body’s mass and radius, reflecting the balance between gravity and orbital motion.</p>
 <hr/>
-<h4 id="second-cosmic-velocity-v_3">Second Cosmic Velocity (<span class="arithmatex">\(v_2\)</span>)</h4>
+<h4 id="second-cosmic-velocity-v_2">Second Cosmic Velocity (<span class="arithmatex">\(v_2\)</span>)</h4>
 <p>The second cosmic velocity is the escape velocity, derived using conservation of mechanical energy. An object escaping to infinity has zero total mechanical energy at infinity (kinetic energy = 0, potential energy = 0).</p>
 <ul>
 <li><strong>Total mechanical energy</strong> at the surface (initial state):</li>
@@ -589,7 +289,7 @@
 </ul>
 <p><strong>Physical Insight</strong>: Escape velocity is higher than orbital velocity, requiring enough energy to overcome the gravitational potential well.</p>
 <hr/>
-<h4 id="third-cosmic-velocity-v_4">Third Cosmic Velocity (<span class="arithmatex">\(v_3\)</span>)</h4>
+<h4 id="third-cosmic-velocity-v_3">Third Cosmic Velocity (<span class="arithmatex">\(v_3\)</span>)</h4>
 <p>The third cosmic velocity is the speed required to escape the Sun’s gravitational influence, starting from the surface of a planet (e.g., Earth). This involves escaping the planet’s gravity and then achieving escape velocity from the Sun’s gravity at the planet’s orbital distance.</p>
 <ul>
 <li>
@@ -627,7 +327,7 @@
 <hr/>
 <p><img alt="alt text" src="../image-2.png"/></p>
 <hr/>
-<h3 id="3-calculations-for-celestial-bodies_1">3. Calculations for Celestial Bodies</h3>
+<h3 id="3-calculations-for-celestial-bodies">3. Calculations for Celestial Bodies</h3>
 <p>We calculate <span class="arithmatex">\(v_1\)</span>, <span class="arithmatex">\(v_2\)</span>, and <span class="arithmatex">\(v_3\)</span> for Earth, Mars, Jupiter, and the Moon using the derived formulas. Below are the parameters:</p>
 <table>
 <thead>
@@ -677,7 +377,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="earth_1">Earth</h3>
+<h3 id="earth">Earth</h3>
 <ul>
 <li>
 <p><strong>First Cosmic Velocity</strong>:
@@ -700,7 +400,7 @@
     $$ v_3 \approx \sqrt{v_2^2 + v_{\text{add}}^2} = \sqrt{11.19^2 + 12.3^2} \approx \sqrt{125.2 + 151.3} \approx 16.6 \, \text{km/s} $$</li>
 </ul>
 <hr/>
-<h3 id="mars_1">Mars</h3>
+<h3 id="mars">Mars</h3>
 <ul>
 <li>
 <p><strong>First Cosmic Velocity</strong>:
@@ -723,7 +423,7 @@
     $$ v_3 \approx \sqrt{5.02^2 + 10.0^2} \approx \sqrt{25.2 + 100} \approx 11.2 \, \text{km/s} $$</li>
 </ul>
 <hr/>
-<h3 id="jupiter_1">Jupiter</h3>
+<h3 id="jupiter">Jupiter</h3>
 <ul>
 <li>
 <p><strong>First Cosmic Velocity</strong>:
@@ -746,7 +446,7 @@
     $$ v_3 \approx \sqrt{58.9^2 + 5.4^2} \approx \sqrt{3469 + 29.2} \approx 59.2 \, \text{km/s} $$</li>
 </ul>
 <hr/>
-<h3 id="moon_1">Moon</h3>
+<h3 id="moon">Moon</h3>
 <ul>
 <li>
 <p><strong>First Cosmic Velocity</strong>:
@@ -761,9 +461,45 @@
 </li>
 </ul>
 <hr/>
-<h3 id="4-visualization-and-data-comparison_1">4. Visualization and Data Comparison</h3>
+<h2 id="4-visualization-and-data-comparison">4. Visualization and Data Comparison</h2>
 <p>Below is a table summarizing the cosmic velocities for Earth, Mars, Jupiter, and the Moon:</p>
-<p>| <strong>Body</strong>  | **<span class="arithmatex">\(v_1\)</span> (km</p>
+<table>
+<thead>
+<tr>
+<th><strong>Body</strong></th>
+<th><strong><span class="arithmatex">\(v_1 (km/s)\)</span></strong></th>
+<th><strong><span class="arithmatex">\(v_2 (km/s)\)</span></strong></th>
+<th><strong><span class="arithmatex">\(v_3 (km/s)\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Earth</td>
+<td>7.91</td>
+<td>11.19</td>
+<td>16.6</td>
+</tr>
+<tr>
+<td>Mars</td>
+<td>3.55</td>
+<td>5.02</td>
+<td>11.2</td>
+</tr>
+<tr>
+<td>Jupiter</td>
+<td>41.6</td>
+<td>58.9</td>
+<td>59.2</td>
+</tr>
+<tr>
+<td>Moon</td>
+<td>1.68</td>
+<td>2.37</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="alt text" src="../image-3.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
