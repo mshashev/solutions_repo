@@ -172,6 +172,240 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-3">Problem 3</h1>
+<h1 id="trajectories-of-a-freely-released-payload-near-earth">Trajectories of a Freely Released Payload Near Earth</h1>
+<p>The motion of a payload released near Earth (ignoring air resistance) follows one of the <strong>conic section trajectories</strong>—<strong>circle</strong>, <strong>ellipse</strong>, <strong>parabola</strong>, or <strong>hyperbola</strong>—depending on its <strong>initial speed</strong> relative to Earth and <strong>direction</strong>.</p>
+<hr/>
+<h3 id="1-circular-orbit">1. Circular Orbit</h3>
+<ul>
+<li><strong>Condition</strong>:<br/>
+<span class="arithmatex">\(v = v_{\text{circular}}\)</span></li>
+<li><strong>Shape</strong>:<br/>
+  Circle (special case of ellipse)</li>
+<li><strong>Energy</strong>:<br/>
+  Total mechanical energy <span class="arithmatex">\(E &lt; 0\)</span></li>
+<li><strong>Nature</strong>:<br/>
+  Closed orbit, constant speed and altitude.</li>
+<li><strong>Example</strong>:<br/>
+  Idealized geostationary satellite.</li>
+</ul>
+<hr/>
+<h3 id="2-elliptical-orbit">2. Elliptical Orbit</h3>
+<ul>
+<li><strong>Condition</strong>:<br/>
+<span class="arithmatex">\(v_{\text{circular}} &lt; v &lt; v_{\text{escape}}\)</span></li>
+<li><strong>Shape</strong>:<br/>
+  Ellipse</li>
+<li><strong>Energy</strong>:<br/>
+<span class="arithmatex">\(E &lt; 0\)</span></li>
+<li><strong>Nature</strong>:<br/>
+  Closed orbit, speed and altitude vary.</li>
+<li><strong>Examples</strong>:<br/>
+  Low Earth Orbit (LEO), Medium Earth Orbit (MEO), Molniya orbit.</li>
+</ul>
+<hr/>
+<h3 id="3-parabolic-trajectory">3. Parabolic Trajectory</h3>
+<ul>
+<li><strong>Condition</strong>:<br/>
+<span class="arithmatex">\(v = v_{\text{escape}}\)</span></li>
+<li><strong>Shape</strong>:<br/>
+  Parabola</li>
+<li><strong>Energy</strong>:<br/>
+<span class="arithmatex">\(E = 0\)</span></li>
+<li><strong>Nature</strong>:<br/>
+  Marginal escape – object escapes Earth, reaching infinity with zero velocity.</li>
+<li><strong>Example</strong>:<br/>
+  Theoretical boundary between bound and unbound motion.</li>
+</ul>
+<hr/>
+<h3 id="4-hyperbolic-trajectory">4. Hyperbolic Trajectory</h3>
+<ul>
+<li><strong>Condition</strong>:<br/>
+<span class="arithmatex">\(v &gt; v_{\text{escape}}\)</span></li>
+<li><strong>Shape</strong>:<br/>
+  Hyperbola</li>
+<li><strong>Energy</strong>:<br/>
+<span class="arithmatex">\(E &gt; 0\)</span></li>
+<li><strong>Nature</strong>:<br/>
+  Open trajectory – object escapes Earth’s gravity with residual velocity.</li>
+<li><strong>Examples</strong>:<br/>
+  Interplanetary missions (e.g., Voyager, New Horizons after Earth flyby).</li>
+</ul>
+<hr/>
+<h3 id="summary-table">Summary Table</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Trajectory</strong></th>
+<th><strong>Velocity Condition</strong></th>
+<th><strong>Total Energy</strong></th>
+<th><strong>Orbit Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Circular</td>
+<td><span class="arithmatex">\(v = v_{\text{circular}}\)</span></td>
+<td><span class="arithmatex">\(E &lt; 0\)</span></td>
+<td>Bound (closed)</td>
+</tr>
+<tr>
+<td>Elliptical</td>
+<td><span class="arithmatex">\(v_{\text{circular}} &lt; v &lt; v_{\text{escape}}\)</span></td>
+<td><span class="arithmatex">\(E &lt; 0\)</span></td>
+<td>Bound (closed)</td>
+</tr>
+<tr>
+<td>Parabolic</td>
+<td><span class="arithmatex">\(v = v_{\text{escape}}\)</span></td>
+<td><span class="arithmatex">\(E = 0\)</span></td>
+<td>Unbound (open)</td>
+</tr>
+<tr>
+<td>Hyperbolic</td>
+<td><span class="arithmatex">\(v &gt; v_{\text{escape}}\)</span></td>
+<td><span class="arithmatex">\(E &gt; 0\)</span></td>
+<td>Unbound (open)</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="alt text" src="../image-6.png"/></p>
+<p><img alt="alt text" src="../image-7.png"/></p>
+<h2 id="numerical-analysis-of-a-payload-trajectory-near-earth">Numerical Analysis of a Payload Trajectory Near Earth</h2>
+<p>This analysis computes the path of a payload released near Earth using Newtonian gravitational physics. We simulate the trajectory based on initial conditions using numerical integration techniques.</p>
+<hr/>
+<h3 id="step-1-define-constants-and-initial-conditions">Step 1: Define Constants and Initial Conditions</h3>
+<p>Let:</p>
+<ul>
+<li>Earth mass: <span class="arithmatex">\(M = 5.972 \times 10^{24} \ \text{kg}\)</span></li>
+<li>Gravitational constant: <span class="arithmatex">\(G = 6.67430 \times 10^{-11} \ \text{N} \cdot \text{m}^2/\text{kg}^2\)</span></li>
+<li>Earth radius: <span class="arithmatex">\(R_e = 6.371 \times 10^6 \ \text{m}\)</span></li>
+<li>Initial altitude: <span class="arithmatex">\(h = 400 \times 10^3 \ \text{m}\)</span> (Low Earth Orbit)</li>
+<li>Total initial radius: <span class="arithmatex">\(R = R_e + h\)</span></li>
+</ul>
+<p><strong>Initial position and velocity:</strong></p>
+<ul>
+<li><span class="arithmatex">\(\vec{r}_0 = (R, 0)\)</span></li>
+<li><span class="arithmatex">\(\vec{v}_0 = (0, v)\)</span></li>
+</ul>
+<p><strong>Reference velocities:</strong></p>
+<ul>
+<li>Circular orbit velocity: <span class="arithmatex">\(v_{\text{circular}} = \sqrt{\frac{GM}{R}}\)</span></li>
+<li>Escape velocity: <span class="arithmatex">\(v_{\text{escape}} = \sqrt{2} \cdot v_{\text{circular}}\)</span></li>
+</ul>
+<hr/>
+<h3 id="step-2-governing-equations">Step 2: Governing Equations</h3>
+<p>Using <strong>Newton's Law of Gravitation</strong> and <strong>Newton's Second Law</strong>, the equations of motion in 2D are:</p>
+<div class="arithmatex">\[
+\vec{F} = -\frac{GMm}{r^2} \hat{r}
+\]</div>
+<div class="arithmatex">\[
+\vec{a} = \frac{\vec{F}}{m} = -\frac{GM}{r^3} \vec{r}
+\]</div>
+<p>In component form:</p>
+<div class="arithmatex">\[
+\frac{d^2x}{dt^2} = -\frac{GMx}{(x^2 + y^2)^{3/2}}, \quad
+\frac{d^2y}{dt^2} = -\frac{GMy}{(x^2 + y^2)^{3/2}}
+\]</div>
+<hr/>
+<h3 id="step-3-numerical-integration-runge-kutta-4th-order">Step 3: Numerical Integration (Runge-Kutta 4th Order)</h3>
+<p>To numerically solve these equations, we define:</p>
+<p>Let:</p>
+<ul>
+<li><span class="arithmatex">\(\vec{r} = (x, y)\)</span> </li>
+<li><span class="arithmatex">\(\vec{v} = (v_x, v_y)\)</span></li>
+</ul>
+<p>Convert to first-order ODEs:</p>
+<div class="arithmatex">\[
+\frac{dx}{dt} = v_x, \quad
+\frac{dy}{dt} = v_y
+\]</div>
+<div class="arithmatex">\[
+\frac{dv_x}{dt} = -\frac{GMx}{(x^2 + y^2)^{3/2}}, \quad
+\frac{dv_y}{dt} = -\frac{GMy}{(x^2 + y^2)^{3/2}}
+\]</div>
+<p>These can be integrated using the Runge-Kutta 4th order method or Euler’s method.</p>
+<hr/>
+<h3 id="step-4-trajectory-classification">Step 4: Trajectory Classification</h3>
+<p>We compute total mechanical energy to classify the orbit:</p>
+<h3 id="total-energy">Total Energy</h3>
+<div class="arithmatex">\[
+E = \frac{1}{2}mv^2 - \frac{GMm}{r}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(E &lt; 0\)</span> → Elliptical orbit (bound)</li>
+<li><span class="arithmatex">\(E = 0\)</span> → Parabolic escape</li>
+<li><span class="arithmatex">\(E &gt; 0\)</span> → Hyperbolic escape</li>
+</ul>
+<h3 id="eccentricity-optional">Eccentricity (Optional)</h3>
+<p>The trajectory's <strong>eccentricity</strong>:</p>
+<div class="arithmatex">\[
+e = \sqrt{1 + \frac{2EL^2}{G^2M^2m^3}}
+\]</div>
+<p>Where <span class="arithmatex">\(L = mrv_\perp\)</span> is the angular momentum.</p>
+<ul>
+<li><span class="arithmatex">\(e &lt; 1\)</span> → Elliptical</li>
+<li><span class="arithmatex">\(e = 1\)</span> → Parabolic</li>
+<li><span class="arithmatex">\(e &gt; 1\)</span> → Hyperbolic</li>
+</ul>
+<hr/>
+<p><img alt="alt text" src="../image-4.png"/></p>
+<hr/>
+<h3 id="the-trajectoriescircular-elliptical-parabolic-and-hyperbolicdictate-orbital-insertion-reentry-and-escape-scenarios-based-on-initial-velocity-and-energy-e-frac12mv2-fracgmmr">The trajectories—circular, elliptical, parabolic, and hyperbolic—dictate <strong>orbital insertion</strong>, <strong>reentry</strong>, and <strong>escape scenarios</strong> based on initial velocity and energy (<span class="arithmatex">\(E = \frac{1}{2}mv^2 - \frac{GMm}{r}\)</span>).</h3>
+<ul>
+<li><strong>Orbital Insertion</strong>:</li>
+<li><strong>Circular Orbit (<span class="arithmatex">\(v = v_{\text{circular}}\)</span>, <span class="arithmatex">\(E &lt; 0\)</span>)</strong>: Stable, constant-altitude orbit (e.g., geostationary satellites). Requires <span class="arithmatex">\(v_{\text{circular}} \approx 7.67 \, \text{km/s}\)</span> at 400 km altitude.</li>
+<li><strong>Elliptical Orbit (<span class="arithmatex">\(v_{\text{circular}} &lt; v &lt; v_{\text{escape}}\)</span>, <span class="arithmatex">\(E &lt; 0\)</span>)</strong>: Bound orbit with varying altitude (e.g., LEO, GPS satellites). Achieved via precise burns, often using transfer orbits.</li>
+<li>
+<p><strong>Process</strong>: Velocity adjustments ensure <span class="arithmatex">\(E &lt; 0\)</span>, <span class="arithmatex">\(e &lt; 1\)</span>.</p>
+</li>
+<li>
+<p><strong>Reentry</strong>:</p>
+</li>
+<li><strong>Circular/Elliptical Orbits</strong>: Starts bound (<span class="arithmatex">\(E &lt; 0\)</span>). A retro-burn (<span class="arithmatex">\(\Delta v \approx 100-200 \, \text{m/s}\)</span>) lowers perigee into the atmosphere (e.g., Crew Dragon).</li>
+<li><strong>Parabolic/Hyperbolic Trajectories (<span class="arithmatex">\(E \geq 0\)</span>)</strong>: Rare, often uncontrolled (e.g., meteoroids, Stardust capsule).</li>
+<li>
+<p><strong>Process</strong>: Energy loss via burns or drag shifts trajectory to descent.</p>
+</li>
+<li>
+<p><strong>Escape Scenarios</strong>:</p>
+</li>
+<li><strong>Parabolic Trajectory (<span class="arithmatex">\(v = v_{\text{escape}}\)</span>, <span class="arithmatex">\(E = 0\)</span>)</strong>: Marginal escape, zero velocity at infinity. Theoretical minimum.</li>
+<li><strong>Hyperbolic Trajectory (<span class="arithmatex">\(v &gt; v_{\text{escape}}\)</span>, <span class="arithmatex">\(E &gt; 0\)</span>)</strong>: Unbound, with residual velocity (e.g., Voyager). Needs <span class="arithmatex">\(\Delta v \approx 3.2 \, \text{km/s}\)</span> from LEO.</li>
+<li><strong>Process</strong>: Burns or gravitational assists achieve <span class="arithmatex">\(E \geq 0\)</span>, <span class="arithmatex">\(e \geq 1\)</span>.</li>
+</ul>
+<p><strong>Relation</strong>: Energy and eccentricity (<span class="arithmatex">\(e = \sqrt{1 + \frac{2EL^2}{G^2M^2m^3}}\)</span>) classify trajectories:
+- Insertion: <span class="arithmatex">\(E &lt; 0\)</span>, <span class="arithmatex">\(e &lt; 1\)</span> (bound).
+- Reentry: Bound, energy reduced for atmospheric entry.
+- Escape: <span class="arithmatex">\(E \geq 0\)</span>, <span class="arithmatex">\(e \geq 1\)</span> (unbound).
+Numerical integration (e.g., Runge-Kutta) ensures precise trajectory prediction.</p>
+<hr/>
+<p><strong>Circular</strong>, <strong>elliptical</strong>, <strong>parabolic</strong>, and <strong>hyperbolic</strong> trajectories, driven by velocity and energy (<span class="arithmatex">\(E = \frac{1}{2}mv^2 - \frac{GMm}{r}\)</span>), enable <strong>space mission planning</strong>, <strong>satellite deployment</strong>, and <strong>planetary exploration</strong>. Numerical integration ensures accuracy.</p>
+<hr/>
+<h2 id="real-world-applications">Real-world applications</h2>
+<h3 id="1-space-mission-planning">1. Space Mission Planning</h3>
+<p>Optimizes trajectories for <strong>insertion</strong>, <strong>reentry</strong>, or <strong>escape</strong>.
+- <strong>Circular (<span class="arithmatex">\(v = v_{\text{circular}}\)</span>, <span class="arithmatex">\(E &lt; 0\)</span>)</strong>: Stable orbits (e.g., geostationary, <span class="arithmatex">\(v \approx 3.07 \, \text{km/s}\)</span>). Precise burns.
+- <strong>Elliptical (<span class="arithmatex">\(v_{\text{circular}} &lt; v &lt; v_{\text{escape}}\)</span>, <span class="arithmatex">\(E &lt; 0\)</span>)</strong>: Variable orbits (e.g., GPS). Hohmann transfers, <span class="arithmatex">\(e &lt; 1\)</span>.
+- <strong>Hyperbolic (<span class="arithmatex">\(v &gt; v_{\text{escape}}\)</span>, <span class="arithmatex">\(E &gt; 0\)</span>)</strong>: Escapes (e.g., New Horizons, <span class="arithmatex">\(v &gt; 11.2 \, \text{km/s}\)</span>). Uses flybys.</p>
+<hr/>
+<h3 id="2-satellite-deployment">2. Satellite Deployment</h3>
+<p>Places satellites in <strong>circular</strong> or <strong>elliptical</strong> orbits.
+- <strong>Circular</strong>: LEO (e.g., Starlink, <span class="arithmatex">\(v \approx 7.6 \, \text{km/s}\)</span>). Burn-circularized, <span class="arithmatex">\(e \approx 0\)</span>.
+- <strong>Elliptical</strong>: Specialized (e.g., Molniya). Transfer orbits, debris avoidance.</p>
+<hr/>
+<h3 id="3-planetary-exploration">3. Planetary Exploration</h3>
+<p><strong>Elliptical</strong> for departure, <strong>hyperbolic</strong> for travel, <strong>circular/elliptical</strong> for arrival.
+- <strong>Elliptical</strong>: Parking orbits (e.g., Perseverance). Low <span class="arithmatex">\(\Delta v\)</span>.
+- <strong>Hyperbolic</strong>: Interplanetary (e.g., Voyager, <span class="arithmatex">\(e &gt; 1\)</span>). Flybys, corrections.
+- <strong>Circular/Elliptical</strong>: Target orbits (e.g., Juno at Jupiter). Burns/aerobraking.</p>
+<hr/>
+<h3 id="summary">Summary</h3>
+<ul>
+<li><strong>Planning</strong>: Circular for stability, elliptical for transfers, hyperbolic for escapes.</li>
+<li><strong>Deployment</strong>: Circular LEO, elliptical specialized.</li>
+<li><strong>Exploration</strong>: Elliptical to hyperbolic to target orbits.
+Uses <span class="arithmatex">\(\vec{a} = -\frac{GM}{r^3}\vec{r}\)</span>, <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(e = \sqrt{1 + \frac{2EL^2}{G^2M^2m^3}}\)</span>, numerical precision.</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
