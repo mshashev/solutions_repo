@@ -172,6 +172,75 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="interference-patterns-on-a-water-surface">Interference Patterns on a water surface</h1>
+<h3 id="step-1-select-a-regular-polygon">Step 1: Select a Regular Polygon</h3>
+<p>We choose an <strong>equilateral triangle</strong> with side length <span class="arithmatex">\(a\)</span>. Place the triangle in the <span class="arithmatex">\(xy\)</span>-plane with its vertices at:
+- Vertex 1: <span class="arithmatex">\((x_1, y_1) = (0, 0)\)</span>
+- Vertex 2: <span class="arithmatex">\((x_2, y_2) = (a, 0)\)</span>
+- Vertex 3: <span class="arithmatex">\((x_3, y_3) = \left( \frac{a}{2}, \frac{a\sqrt{3}}{2} \right)\)</span></p>
+<p>These coordinates ensure the triangle is equilateral, as the distances between vertices are all equal to <span class="arithmatex">\(a\)</span>.</p>
+<hr/>
+<h3 id="step-2-position-the-sources">Step 2: Position the Sources</h3>
+<p>The point wave sources are placed at the vertices of the triangle:
+- Source 1 at <span class="arithmatex">\((0, 0)\)</span>
+- Source 2 at <span class="arithmatex">\((a, 0)\)</span>
+- Source 3 at <span class="arithmatex">\(\left( \frac{a}{2}, \frac{a\sqrt{3}}{2} \right)\)</span></p>
+<hr/>
+<h3 id="step-3-wave-equations">Step 3: Wave Equations</h3>
+<p>Each source emits a circular wave described by the given equation:
+$$
+\eta(x, y, t) = \frac{A}{\sqrt{r}} \cdot \cos(kr - \omega t + \phi)
+$$
+where:
+- <span class="arithmatex">\(r = \sqrt{(x - x_i)^2 + (y - y_i)^2}\)</span> is the distance from source <span class="arithmatex">\(i\)</span> at <span class="arithmatex">\((x_i, y_i)\)</span> to point <span class="arithmatex">\((x, y)\)</span>.
+- <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(k\)</span>, <span class="arithmatex">\(\omega\)</span>, and <span class="arithmatex">\(\phi\)</span> are the same for all sources (same amplitude, wavelength, frequency, and initial phase).
+- Assume <span class="arithmatex">\(\phi = 0\)</span> for simplicity, as the waves are coherent with a constant phase difference (which we can set to zero without loss of generality).</p>
+<p>For each source:
+- <strong>Source 1 (<span class="arithmatex">\(i=1\)</span>)</strong>: <span class="arithmatex">\(r_1 = \sqrt{x^2 + y^2}\)</span>
+$$
+\eta_1(x, y, t) = \frac{A}{\sqrt{r_1}} \cos(kr_1 - \omega t)
+$$
+- <strong>Source 2 (<span class="arithmatex">\(i=2\)</span>)</strong>: <span class="arithmatex">\(r_2 = \sqrt{(x - a)^2 + y^2}\)</span>
+$$
+\eta_2(x, y, t) = \frac{A}{\sqrt{r_2}} \cos(kr_2 - \omega t)
+$$
+- <strong>Source 3 (<span class="arithmatex">\(i=3\)</span>)</strong>: <span class="arithmatex">\(r_3 = \sqrt{\left(x - \frac{a}{2}\right)^2 + \left(y - \frac{a\sqrt{3}}{2}\right)^2}\)</span>
+$$
+\eta_3(x, y, t) = \frac{A}{\sqrt{r_3}} \cos(kr_3 - \omega t)
+$$</p>
+<hr/>
+<h3 id="step-4-superposition-of-waves">Step 4: Superposition of Waves</h3>
+<p>The total displacement at point <span class="arithmatex">\((x, y)\)</span> and time <span class="arithmatex">\(t\)</span> is the sum of the displacements from all sources:
+$$
+\eta_{\text{sum}}(x, y, t) = \eta_1(x, y, t) + \eta_2(x, y, t) + \eta_3(x, y, t)
+$$
+$$
+\eta_{\text{sum}}(x, y, t) = \sum_{i=1}^3 \frac{A}{\sqrt{r_i}} \cos(kr_i - \omega t)
+$$</p>
+<hr/>
+<h3 id="step-5-analyze-interference-patterns">Step 5: Analyze Interference Patterns</h3>
+<p>To identify constructive and destructive interference:
+- <strong>Constructive interference</strong> occurs when the waves are in phase, i.e., the phase difference <span class="arithmatex">\(k(r_i - r_j)\)</span> is a multiple of <span class="arithmatex">\(2\pi\)</span>, so <span class="arithmatex">\(|r_i - r_j| = m\lambda\)</span>, where <span class="arithmatex">\(m\)</span> is an integer and <span class="arithmatex">\(\lambda = \frac{2\pi}{k}\)</span>.
+- <strong>Destructive interference</strong> occurs when the waves are out of phase by <span class="arithmatex">\(\pi\)</span>, i.e., <span class="arithmatex">\(|r_i - r_j| = (m + \frac{1}{2})\lambda\)</span>.</p>
+<p>Since <span class="arithmatex">\(r_i\)</span> depends on the position <span class="arithmatex">\((x, y)\)</span>, we evaluate <span class="arithmatex">\(\eta_{\text{sum}}\)</span> over a grid of points. Set <span class="arithmatex">\(t = 0\)</span> for simplicity:
+$$
+\eta_{\text{sum}}(x, y, 0) = \sum_{i=1}^3 \frac{A}{\sqrt{r_i}} \cos(kr_i)
+$$
+The intensity is approximately <span class="arithmatex">\(I \propto |\eta_{\text{sum}}|^2\)</span>, but we can plot <span class="arithmatex">\(\eta_{\text{sum}}\)</span> to see crests and troughs.</p>
+<hr/>
+<h2 id="single-source">Single Source:</h2>
+<p><img alt="alt text" src="../image-2.png"/></p>
+<h2 id="two-sorces">Two Sorces:</h2>
+<p><img alt="alt text" src="../image-3.png"/></p>
+<h2 id="double-slit">Double Slit:</h2>
+<p><img alt="alt text" src="../image-4.png"/></p>
+<h2 id="triangle">Triangle:</h2>
+<p><img alt="alt text" src="../image-5.png"/></p>
+<h2 id="square">Square:</h2>
+<p><img alt="alt text" src="../image-6.png"/></p>
+<h2 id="circle8-sources">Circle(8 sources):</h2>
+<p><img alt="alt text" src="../image-7.png"/></p>
+<p><a href="https://replit.com/@shevcm5713825ae/WaveInterference">link to the visualizations</a></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
