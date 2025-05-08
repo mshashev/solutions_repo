@@ -93,4 +93,4 @@ The intensity is approximately $I \propto |\eta_{\text{sum}}|^2$, but we can plo
 
 ![alt text](image-7.png)
 
-[link to the visualizations](https://replit.com/@shevcm5713825ae/WaveInterference)
+[link to the visualisations](https://replit.com/@shevcm5713825ae/WaveInterference)
