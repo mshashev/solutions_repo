@@ -7,11 +7,11 @@ To derive the relationship between the square of the orbital period ($T^2$) and 
 1. ### Gravitational and Centripetal Forces:  
    The gravitational force equals the centripetal force for a satellite of mass $m$ orbiting a body of mass $M$:  
 
-    $\frac{G M m}{r^2} = \frac{m v^2}{r}$.  
+$\frac{G M m}{r^2} = \frac{m v^2}{r}$.  
 
    Cancel $m$ and multiply by $r$:
 
-    $\frac{G M}{r} = v^2$.
+$\frac{G M}{r} = v^2$.
 
 2. ### Orbital Velocity:  
    The velocity is:  
