@@ -11,7 +11,7 @@ To derive the relationship between the square of the orbital period ($T^2$) and 
 
    Cancel $m$ and multiply by $r$:
 
-    $\frac{G M}{r} = v^2$.
+    $ \frac{G M}{r} = v^2 $.
 
 2. ### Orbital Velocity:  
    The velocity is:  
