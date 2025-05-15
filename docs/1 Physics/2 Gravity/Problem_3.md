@@ -70,10 +70,10 @@ The motion of a payload released near Earth (ignoring air resistance) follows on
 | Parabolic            | $v = v_{\text{escape}}$                  | $E = 0$            | Unbound (open)      |
 | Hyperbolic           | $v > v_{\text{escape}}$                  | $E > 0$            | Unbound (open)      |
 
-![alt text](image-6.png)
+![alt text](image-9.png)
 
 
-![alt text](image-7.png)
+
 
 ## Numerical Analysis of a Payload Trajectory Near Earth
 
