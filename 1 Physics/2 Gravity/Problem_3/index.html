@@ -405,6 +405,125 @@ Numerical integration (e.g., Runge-Kutta) ensures precise trajectory prediction.
 <li><strong>Exploration</strong>: Elliptical to hyperbolic to target orbits.
 Uses <span class="arithmatex">\(\vec{a} = -\frac{GM}{r^3}\vec{r}\)</span>, <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(e = \sqrt{1 + \frac{2EL^2}{G^2M^2m^3}}\)</span>, numerical precision.</li>
 </ul>
+<h2 id="-">---</h2>
+<p>Okay, let's go through these function problems step by step in English.</p>
+<p><strong>Q1. Determine if <span class="arithmatex">\(f(x) = 2x + 3\)</span> is one-to-one.</strong></p>
+<p>To check if a function is one-to-one (injective), we need to show that if <span class="arithmatex">\(f(a) = f(b)\)</span>, then <span class="arithmatex">\(a = b\)</span>.</p>
+<p>If <span class="arithmatex">\(f(a) = f(b)\)</span>. Then:<span class="arithmatex">\(<span class="arithmatex">\(2a + 3 = 2b + 3\)</span>\)</span>Subtracting 3 from both sides, we get:<span class="arithmatex">\(<span class="arithmatex">\(2a = 2b\)</span>\)</span>Dividing both sides by 2, we get:<span class="arithmatex">\(<span class="arithmatex">\(a = b\)</span>\)</span>
+Therefore, the function <span class="arithmatex">\(f(x) = 2x + 3\)</span> is one-to-one.</p>
+<p><strong>Q2. Is <span class="arithmatex">\(f(x) = x^2\)</span> one-to-one on <span class="arithmatex">\(\mathbb{R}\)</span>?</strong></p>
+<p>No, the function <span class="arithmatex">\(f(x) = x^2\)</span> is not one-to-one on the set of real numbers <span class="arithmatex">\(\mathbb{R}\)</span>. We can find two different inputs that give the same output. For example:
+<span class="arithmatex">\(<span class="arithmatex">\(f(2) = 2^2 = 4\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(f(-2) = (-2)^2 = 4\)</span>\)</span>
+Since <span class="arithmatex">\(f(2) = f(-2)\)</span> but <span class="arithmatex">\(2 \neq -2\)</span>, the function is not one-to-one on <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<p><strong>Q3. Show that <span class="arithmatex">\(f(x) = \frac{1}{x}\)</span> is one-to-one on <span class="arithmatex">\(\mathbb{R} \setminus \{0\}\)</span>.</strong></p>
+<p>Assume <span class="arithmatex">\(f(a) = f(b)\)</span> for <span class="arithmatex">\(a, b \in \mathbb{R} \setminus \{0\}\)</span>. Then:<span class="arithmatex">\(<span class="arithmatex">\(\frac{1}{a} = \frac{1}{b}\)</span>\)</span>Multiplying both sides by <span class="arithmatex">\(ab\)</span> (which is allowed since <span class="arithmatex">\(a \neq 0\)</span> and <span class="arithmatex">\(b \neq 0\)</span>), we get:<span class="arithmatex">\(<span class="arithmatex">\(b = a\)</span>\)</span>
+Therefore, the function <span class="arithmatex">\(f(x) = \frac{1}{x}\)</span> is one-to-one on <span class="arithmatex">\(\mathbb{R} \setminus \{0\}\)</span>.</p>
+<p><strong>Q4. Is <span class="arithmatex">\(f(x) = 3x + 1\)</span> onto <span class="arithmatex">\(\mathbb{R}\)</span>?</strong></p>
+<p>To check if a function is onto (surjective), we need to show that for every <span class="arithmatex">\(y \in \mathbb{R}\)</span>, there exists an <span class="arithmatex">\(x \in \mathbb{R}\)</span> such that <span class="arithmatex">\(f(x) = y\)</span>.</p>
+<p>Let <span class="arithmatex">\(y\)</span> be any real number. We want to find <span class="arithmatex">\(x\)</span> such that:
+<span class="arithmatex">\(<span class="arithmatex">\(3x + 1 = y\)</span>\)</span>Subtracting 1 from both sides, we get:<span class="arithmatex">\(<span class="arithmatex">\(3x = y - 1\)</span>\)</span>Dividing both sides by 3, we get:<span class="arithmatex">\(<span class="arithmatex">\(x = \frac{y - 1}{3}\)</span>\)</span>
+Since for every <span class="arithmatex">\(y \in \mathbb{R}\)</span>, <span class="arithmatex">\(x = \frac{y - 1}{3}\)</span> is also a real number and satisfies <span class="arithmatex">\(f(x) = y\)</span>, the function <span class="arithmatex">\(f(x) = 3x + 1\)</span> is onto <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<p><strong>Q5. Is <span class="arithmatex">\(f(x) = e^x\)</span> onto <span class="arithmatex">\(\mathbb{R}\)</span>?</strong></p>
+<p>No, the function <span class="arithmatex">\(f(x) = e^x\)</span> is not onto <span class="arithmatex">\(\mathbb{R}\)</span>. The range of the function <span class="arithmatex">\(e^x\)</span> is <span class="arithmatex">\((0, \infty)\)</span>, which is the set of all positive real numbers. There is no real number <span class="arithmatex">\(x\)</span> such that <span class="arithmatex">\(e^x\)</span> is non-positive (zero or negative). Therefore, not every element in <span class="arithmatex">\(\mathbb{R}\)</span> has a pre-image in the domain.</p>
+<p><strong>Q6. Show that <span class="arithmatex">\(f(x) = x^3\)</span> is onto <span class="arithmatex">\(\mathbb{R}\)</span>.</strong></p>
+<p>Let <span class="arithmatex">\(y\)</span> be any real number. We want to find <span class="arithmatex">\(x\)</span> such that <span class="arithmatex">\(f(x) = y\)</span>, which means:
+<span class="arithmatex">\(<span class="arithmatex">\(x^3 = y\)</span>\)</span>Taking the cube root of both sides, we get:<span class="arithmatex">\(<span class="arithmatex">\(x = \sqrt[3]{y}\)</span>\)</span>
+For every real number <span class="arithmatex">\(y\)</span>, there exists a unique real number <span class="arithmatex">\(x = \sqrt[3]{y}\)</span> such that <span class="arithmatex">\(x^3 = y\)</span>. Therefore, the function <span class="arithmatex">\(f(x) = x^3\)</span> is onto <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<p><strong>Q7. Find the inverse of <span class="arithmatex">\(f(x) = 2x + 5\)</span>.</strong></p>
+<p>To find the inverse function, we swap <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> and solve for <span class="arithmatex">\(y\)</span>.
+Let <span class="arithmatex">\(y = f(x) = 2x + 5\)</span>. Swap <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>:
+<span class="arithmatex">\(<span class="arithmatex">\(x = 2y + 5\)</span>\)</span>Now solve for <span class="arithmatex">\(y\)</span>:<span class="arithmatex">\(<span class="arithmatex">\(x - 5 = 2y\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(y = \frac{x - 5}{2}\)</span>\)</span>
+Therefore, the inverse function is <span class="arithmatex">\(f^{-1}(x) = \frac{x - 5}{2}\)</span>.</p>
+<p><strong>Q8. Find the inverse of <span class="arithmatex">\(f(x) = \frac{x - 1}{x + 2}\)</span>.</strong></p>
+<p>Let <span class="arithmatex">\(y = f(x) = \frac{x - 1}{x + 2}\)</span>. Swap <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>:
+<span class="arithmatex">\(<span class="arithmatex">\(x = \frac{y - 1}{y + 2}\)</span>\)</span>Now solve for <span class="arithmatex">\(y\)</span>:<span class="arithmatex">\(<span class="arithmatex">\(x(y + 2) = y - 1\)</span>\)</span><span class="arithmatex">\(<span class="arithmatex">\(xy + 2x = y - 1\)</span>\)</span><span class="arithmatex">\(<span class="arithmatex">\(xy - y = -2x - 1\)</span>\)</span><span class="arithmatex">\(<span class="arithmatex">\(y(x - 1) = -2x - 1\)</span>\)</span><span class="arithmatex">\(<span class="arithmatex">\(y = \frac{-2x - 1}{x - 1} = \frac{2x + 1}{1 - x}\)</span>\)</span>
+Therefore, the inverse function is <span class="arithmatex">\(f^{-1}(x) = \frac{2x + 1}{1 - x}\)</span>.</p>
+<p><strong>Q9. Does <span class="arithmatex">\(f(x) = x^2\)</span> have an inverse over <span class="arithmatex">\(\mathbb{R}\)</span>?</strong></p>
+<p>No, the function <span class="arithmatex">\(f(x) = x^2\)</span> does not have an inverse over the set of real numbers <span class="arithmatex">\(\mathbb{R}\)</span>. For a function to have an inverse, it must be a bijection (both one-to-one and onto). As shown in Q2, <span class="arithmatex">\(f(x) = x^2\)</span> is not one-to-one on <span class="arithmatex">\(\mathbb{R}\)</span>, so it cannot have an inverse function on this set.</p>
+<p><strong>Q10. Verify <span class="arithmatex">\(f(f^{-1}(x)) = x\)</span> for <span class="arithmatex">\(f(x) = 3x - 4\)</span>.</strong></p>
+<p>First, let's find the inverse function <span class="arithmatex">\(f^{-1}(x)\)</span>. Let <span class="arithmatex">\(y = 3x - 4\)</span>. Swap <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>:
+<span class="arithmatex">\(<span class="arithmatex">\(x = 3y - 4\)</span>\)</span><span class="arithmatex">\(<span class="arithmatex">\(x + 4 = 3y\)</span>\)</span><span class="arithmatex">\(<span class="arithmatex">\(y = \frac{x + 4}{3}\)</span>\)</span>
+So, <span class="arithmatex">\(f^{-1}(x) = \frac{x + 4}{3}\)</span>.</p>
+<p>Now, let's compute <span class="arithmatex">\(f(f^{-1}(x))\)</span>:
+<span class="arithmatex">\(<span class="arithmatex">\(f(f^{-1}(x)) = f\left(\frac{x + 4}{3}\right) = 3\left(\frac{x + 4}{3}\right) - 4 = (x + 4) - 4 = x\)</span>\)</span>
+Thus, <span class="arithmatex">\(f(f^{-1}(x)) = x\)</span> is verified.</p>
+<p><strong>Q11. Show that <span class="arithmatex">\(f(x) = x + 1\)</span> is a bijection.</strong></p>
+<p>To show that <span class="arithmatex">\(f(x) = x + 1\)</span> is a bijection, we need to show that it is both one-to-one and onto.</p>
+<ul>
+<li><strong>One-to-one:</strong> Assume <span class="arithmatex">\(f(a) = f(b)\)</span>. Then <span class="arithmatex">\(a + 1 = b + 1\)</span>, which implies <span class="arithmatex">\(a = b\)</span>. Therefore, <span class="arithmatex">\(f(x)\)</span> is one-to-one.</li>
+<li><strong>Onto:</strong> Let <span class="arithmatex">\(y\)</span> be any real number. We want to find <span class="arithmatex">\(x\)</span> such that <span class="arithmatex">\(f(x) = y\)</span>, i.e., <span class="arithmatex">\(x + 1 = y\)</span>. Solving for <span class="arithmatex">\(x\)</span>, we get <span class="arithmatex">\(x = y - 1\)</span>. Since for every <span class="arithmatex">\(y \in \mathbb{R}\)</span>, <span class="arithmatex">\(x = y - 1\)</span> is also a real number, the function is onto.</li>
+</ul>
+<p>Since <span class="arithmatex">\(f(x) = x + 1\)</span> is both one-to-one and onto, it is a bijection.</p>
+<p><strong>Q12. Is <span class="arithmatex">\(f(x) = \sin x\)</span> a bijection on <span class="arithmatex">\(\mathbb{R}\)</span>?</strong></p>
+<p>No, the function <span class="arithmatex">\(f(x) = \sin x\)</span> is not a bijection on <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<ul>
+<li><strong>Not one-to-one:</strong> For example, <span class="arithmatex">\(\sin(0) = 0\)</span> and <span class="arithmatex">\(\sin(\pi) = 0\)</span>, but <span class="arithmatex">\(0 \neq \pi\)</span>.</li>
+<li><strong>Not onto:</strong> The range of the function <span class="arithmatex">\(\sin x\)</span> is <span class="arithmatex">\([-1, 1]\)</span>, which is not the entire set of real numbers <span class="arithmatex">\(\mathbb{R}\)</span>. For example, there is no <span class="arithmatex">\(x \in \mathbb{R}\)</span> such that <span class="arithmatex">\(\sin x = 2\)</span>.</li>
+</ul>
+<p>Therefore, <span class="arithmatex">\(f(x) = \sin x\)</span> is not a bijection on <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<p><strong>Q13. Find the inverse of <span class="arithmatex">\(f(x) = \frac{1}{x + 1}\)</span>.</strong></p>
+<p>Let <span class="arithmatex">\(y = f(x) = \frac{1}{x + 1}\)</span>. Swap <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>:
+<span class="arithmatex">\(<span class="arithmatex">\(x = \frac{1}{y + 1}\)</span>\)</span>Now solve for <span class="arithmatex">\(y\)</span>:<span class="arithmatex">\(<span class="arithmatex">\(x(y + 1) = 1\)</span>\)</span><span class="arithmatex">\(<span class="arithmatex">\(xy + x = 1\)</span>\)</span><span class="arithmatex">\(<span class="arithmatex">\(xy = 1 - x\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(y = \frac{1 - x}{x}\)</span>\)</span>
+Therefore, the inverse function is <span class="arithmatex">\(f^{-1}(x) = \frac{1 - x}{x}\)</span>.</p>
+<p><strong>Q14. Let <span class="arithmatex">\(f(x) = 2x + 3\)</span>, <span class="arithmatex">\(g(x) = x^2\)</span>. Find <span class="arithmatex">\((f \circ g)(x)\)</span>.</strong></p>
+<p>The composition of functions <span class="arithmatex">\((f \circ g)(x)\)</span> is defined as <span class="arithmatex">\(f(g(x))\)</span>.
+<span class="arithmatex">\(<span class="arithmatex">\(f(g(x)) = f(x^2) = 2(x^2) + 3 = 2x^2 + 3\)</span>\)</span>
+Therefore, <span class="arithmatex">\((f \circ g)(x) = 2x^2 + 3\)</span>.</p>
+<p><strong>Q15. Let <span class="arithmatex">\(f(x) = \sqrt{x}\)</span>, <span class="arithmatex">\(g(x) = x + 1\)</span>. Find <span class="arithmatex">\((f \circ g)(x)\)</span> and domain.</strong></p>
+<p>The composition of functions <span class="arithmatex">\((f \circ g)(x)\)</span> is defined as <span class="arithmatex">\(f(g(x))\)</span>.
+<span class="arithmatex">\(<span class="arithmatex">\(f(g(x)) = f(x + 1) = \sqrt{x + 1}\)</span>\)</span>
+Therefore, <span class="arithmatex">\((f \circ g)(x) = \sqrt{x + 1}\)</span>.</p>
+<p>To find the domain of <span class="arithmatex">\((f \circ g)(x)\)</span>, we need to consider the domain of the inner function <span class="arithmatex">\(g(x)\)</span> and the domain of the outer function <span class="arithmatex">\(f(x)\)</span> after substituting <span class="arithmatex">\(g(x)\)</span>.
+* The domain of <span class="arithmatex">\(g(x) = x + 1\)</span> is all real numbers <span class="arithmatex">\(\mathbb{R}\)</span>.
+* The domain of <span class="arithmatex">\(f(x) = \sqrt{x}\)</span> is <span class="arithmatex">\(x \ge 0\)</span>.</p>
+<p>For the composition <span class="arithmatex">\(f(g(x)) = \sqrt{x + 1}\)</span>, the argument of the square root must be non-negative:
+<span class="arithmatex">\(<span class="arithmatex">\(x + 1 \ge 0\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(x \ge -1\)</span>\)</span>
+Therefore, the domain of <span class="arithmatex">\((f \circ g)(x)\)</span> is <span class="arithmatex">\([-1, \infty)\)</span>.</p>
+<p><strong>Q16. If <span class="arithmatex">\(f(x) = \frac{1}{x}\)</span>, <span class="arithmatex">\(g(x) = x^2\)</span>, find <span class="arithmatex">\((g \circ f)(x)\)</span>.</strong></p>
+<p>The composition of functions <span class="arithmatex">\((g \circ f)(x)\)</span> is defined as <span class="arithmatex">\(g(f(x))\)</span>.
+<span class="arithmatex">\(<span class="arithmatex">\(g(f(x)) = g\left(\frac{1}{x}\right) = \left(\frac{1}{x}\right)^2 = \frac{1}{x^2}\)</span>\)</span>
+Therefore, <span class="arithmatex">\((g \circ f)(x) = \frac{1}{x^2}\)</span>. The domain of this function is <span class="arithmatex">\(\mathbb{R} \setminus \{0\}\)</span>, since <span class="arithmatex">\(x\)</span> cannot be zero (due to <span class="arithmatex">\(f(x) = \frac{1}{x}\)</span>).</p>
+<p><strong>Q17. Show that composition of two bijections is a bijection.</strong></p>
+<p>Let <span class="arithmatex">\(f: A \to B\)</span> and <span class="arithmatex">\(g: B \to C\)</span> be two bijections. We need to show that their composition <span class="arithmatex">\(g \circ f: A \to C\)</span> is also a bijection, meaning it is both one-to-one and onto.</p>
+<ul>
+<li>
+<p><strong>One-to-one:</strong> Assume <span class="arithmatex">\((g \circ f)(a_1) = (g \circ f)(a_2)\)</span> for <span class="arithmatex">\(a_1, a_2 \in A\)</span>. Then <span class="arithmatex">\(g(f(a_1)) = g(f(a_2))\)</span>. Since <span class="arithmatex">\(g\)</span> is one-to-one, it must be that <span class="arithmatex">\(f(a_1) = f(a_2)\)</span>. Since <span class="arithmatex">\(f\)</span> is one-to-one, it must be that <span class="arithmatex">\(a_1 = a_2\)</span>. Therefore, <span class="arithmatex">\(g \circ f\)</span> is one-to-one.</p>
+</li>
+<li>
+<p><strong>Onto:</strong> Let <span class="arithmatex">\(c \in C\)</span> be any element. Since <span class="arithmatex">\(g: B \to C\)</span> is onto, there exists a <span class="arithmatex">\(b \in B\)</span> such that <span class="arithmatex">\(g(b) = c\)</span>. Since <span class="arithmatex">\(f: A \to B\)</span> is onto, there exists an <span class="arithmatex">\(a \in A\)</span> such that <span class="arithmatex">\(f(a) = b\)</span>. Then <span class="arithmatex">\(g(f(a)) = g(b) = c\)</span>. For every <span class="arithmatex">\(c \in C\)</span>, there exists an <span class="arithmatex">\(a \in A\)</span> such that <span class="arithmatex">\((g \circ f)(a) = c\)</span>, so <span class="arithmatex">\(g \circ f\)</span> is onto.</p>
+</li>
+</ul>
+<p>Since <span class="arithmatex">\(g \circ f\)</span> is both one-to-one and onto, it is a bijection.</p>
+<p><strong>Q18. Find <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> such that <span class="arithmatex">\(f \circ g = \sqrt{x^2 + 1}\)</span>.</strong></p>
+<p>There are many possible answers. One simple possibility is:
+<span class="arithmatex">\(<span class="arithmatex">\(g(x) = x^2 + 1\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(f(x) = \sqrt{x}\)</span>\)</span>
+Then <span class="arithmatex">\((f \circ g)(x) = f(g(x)) = f(x^2 + 1) = \sqrt{x^2 + 1}\)</span>.</p>
+<p>Another possibility is:
+<span class="arithmatex">\(<span class="arithmatex">\(g(x) = x\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(f(x) = \sqrt{x^2 + 1}\)</span>\)</span>
+Then <span class="arithmatex">\((f \circ g)(x) = f(g(x)) = f(x) = \sqrt{x^2 + 1}\)</span>.</p>
+<p><strong>Q19. Is <span class="arithmatex">\(f(x) = \ln x\)</span> invertible? Find its inverse.</strong></p>
+<p>For a function to be invertible, it must be a bijection from its domain to its range.</p>
+<ul>
+<li>The function <span class="arithmatex">\(f(x) = \ln x\)</span> has a domain of <span class="arithmatex">\((0, \infty)\)</span> and a range of <span class="arithmatex">\(\mathbb{R}\)</span>.</li>
+<li>It is one-to-one because if <span class="arithmatex">\(\ln a = \ln b\)</span>, then <span class="arithmatex">\(a = b\)</span>.</li>
+<li>It is onto its range <span class="arithmatex">\(\mathbb{R}\)</span> because for every <span class="arithmatex">\(y \in \mathbb{R}\)</span>, there exists an <span class="arithmatex">\(x = e^y \in (0, \infty)\)</span> such that <span class="arithmatex">\(\ln(e^y) = y\)</span>.</li>
+</ul>
+<p>Therefore, <span class="arithmatex">\(f(x) = \ln x\)</span> is invertible on its domain <span class="arithmatex">\((0, \infty)\)</span> and range <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<p>To find its inverse, let <span class="arithmatex">\(y = \ln x\)</span>. Swap <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>:
+<span class="arithmatex">\(<span class="arithmatex">\(x = \ln y\)</span>\)</span>To solve for <span class="arithmatex">\(y\)</span>, we rewrite the equation in exponential form:<span class="arithmatex">\(<span class="arithmatex">\(e^x = y\)</span>\)</span>
+Therefore, the inverse function is <span class="arithmatex">\(f^{-1}(x) = e^x\)</span>.</p>
+<p><strong>Q20. If <span class="arithmatex">\(f(x) = 3x + 2\)</span>, <span class="arithmatex">\(g(x) = \frac{x - 2}{3}\)</span>, show <span class="arithmatex">\(f \circ g = g \circ f = x\)</span>.</strong></p>
+<p>Let's compute <span class="arithmatex">\(f \circ g\)</span>:
+<span class="arithmatex">\(<span class="arithmatex">\((f \circ g)(x) = f(g(x)) = f\left(\frac{x - 2}{3}\right) = 3\left(\frac{x - 2}{3}\right) + 2 = (x - 2) + 2 = x\)</span>\)</span></p>
+<p>Now, let's compute <span class="arithmatex">\(g \circ f\)</span>:
+<span class="arithmatex">\(<span class="arithmatex">\((g \circ f)(x) = g(f(x)) = g(3x + 2) = \frac{(3x + 2) - 2}{3} = \frac{3x}{3} = x\)</span>\)</span></p>
+<p>Since <span class="arithmatex">\((f \circ g)(x) = x\)</span> and <span class="arithmatex">\((g \circ f)(x) = x\)</span>, we have shown that <span class="arithmatex">\(f \circ g = g \circ f = x\)</span>. This means that <span class="arithmatex">\(g\)</span> is the inverse function of <span class="arithmatex">\(f\)</span>, and <span class="arithmatex">\(f\)</span> is the inverse function of <span class="arithmatex">\(g\)</span>.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
