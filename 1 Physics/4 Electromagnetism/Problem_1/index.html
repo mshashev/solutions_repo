@@ -72,6 +72,36 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#lorentz-force">Lorentz Force</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#case-1-only-electric-field-present">Case 1: Only Electric Field Present</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#case-2-only-magnetic-field-present">Case 2: Only Magnetic Field Present</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#case-3-crossed-electric-and-magnetic-fields">Case 3: Crossed Electric and Magnetic Fields</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#general-motion-arbitrary-e-and-b-fields">General Motion: Arbitrary E and B Fields</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#numerical-methods-for-solving-the-equations-of-motion">Numerical Methods for Solving the Equations of Motion</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#1-euler-method">1. Euler Method</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-runge-kutta-method-4th-order-rk4">2. Runge-Kutta Method (4th Order, RK4)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exploration-of-applications">Exploration of Applications</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-particle-accelerators">1. Particle Accelerators</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-mass-spectrometers">2. Mass Spectrometers</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-plasma-confinement-fusion-reactors">3. Plasma Confinement (Fusion Reactors)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#relevance-of-electric-and-magnetic-fields">Relevance of Electric and Magnetic Fields</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -172,6 +202,122 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h2 id="lorentz-force">Lorentz Force</h2>
+<p>The Lorentz force is a fundamental concept in electromagnetism, describing the force experienced by a charged particle moving in both electric and magnetic fields. It is given by the equation:</p>
+<div class="arithmatex">\[\mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})\]</div>
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(\mathbf{F}\)</span> is the Lorentz force</li>
+<li><span class="arithmatex">\(q\)</span> is the charge of the particle</li>
+<li><span class="arithmatex">\(\mathbf{E}\)</span> is the electric field</li>
+<li><span class="arithmatex">\(\mathbf{v}\)</span> is the velocity of the particle</li>
+<li><span class="arithmatex">\(\mathbf{B}\)</span> is the magnetic field</li>
+<li><span class="arithmatex">\(\times\)</span> denotes the vector cross product</li>
+</ul>
+<hr/>
+<h3 id="case-1-only-electric-field-present">Case 1: Only Electric Field Present</h3>
+<div class="arithmatex">\[
+\vec{F} = q\vec{E}
+\]</div>
+<ul>
+<li>The force is in the direction of <span class="arithmatex">\(( \vec{E} )\)</span> (or opposite for negative charges).  </li>
+<li>The motion is <strong>uniformly accelerated</strong> in the direction of the electric field.</li>
+</ul>
+<hr/>
+<h3 id="case-2-only-magnetic-field-present">Case 2: Only Magnetic Field Present</h3>
+<div class="arithmatex">\[
+\vec{F} = q(\vec{v} \times \vec{B})
+\]</div>
+<ul>
+<li>The force is always <strong>perpendicular</strong> to the velocity.  </li>
+<li>This causes the particle to follow a <strong>circular or helical</strong> path.</li>
+</ul>
+<h4 id="larmor-radius-cyclotron-radius">Larmor Radius (Cyclotron Radius)</h4>
+<div class="arithmatex">\[
+r_L = \frac{mv_\perp}{qB}
+\]</div>
+<p>Where ($ v_\perp $) is the component of velocity perpendicular to the magnetic field.</p>
+<h4 id="cyclotron-frequency">Cyclotron Frequency</h4>
+<div class="arithmatex">\[
+\omega_c = \frac{qB}{m}
+\]</div>
+<h4 id="period-of-circular-motion">Period of Circular Motion</h4>
+<div class="arithmatex">\[
+T = \frac{2\pi m}{qB}
+\]</div>
+<hr/>
+<h3 id="case-3-crossed-electric-and-magnetic-fields">Case 3: Crossed Electric and Magnetic Fields</h3>
+<p>When <span class="arithmatex">\(( \vec{E} \perp \vec{B} )\)</span>, the particle exhibits a <strong>drift motion</strong>:</p>
+<h4 id="e-b-drift-velocity">E × B Drift Velocity</h4>
+<div class="arithmatex">\[
+\vec{v}_d = \frac{\vec{E} \times \vec{B}}{B^2}
+\]</div>
+<ul>
+<li>This drift is <strong>independent of particle charge or mass</strong>.  </li>
+<li>All charged particles experience the same drift direction and speed.</li>
+</ul>
+<hr/>
+<h3 id="general-motion-arbitrary-e-and-b-fields">General Motion: Arbitrary E and B Fields</h3>
+<p>Depending on the orientation of fields and velocity:</p>
+<ul>
+<li><strong>Circular motion</strong> if <span class="arithmatex">\(( \vec{v} \perp \vec{B} ), ( \vec{E} = 0 )\)</span> </li>
+<li><strong>Helical motion</strong> if <span class="arithmatex">\(( \vec{v} )\)</span> has a component along <span class="arithmatex">\(( \vec{B} )\)</span> </li>
+<li><strong>Accelerated motion</strong> along <span class="arithmatex">\(( \vec{E} )\)</span> if <span class="arithmatex">\(( \vec{E} \parallel \vec{B} )\)</span> </li>
+<li><strong>E × B Drift</strong> if <span class="arithmatex">\(( \vec{E} \perp \vec{B} )\)</span> </li>
+</ul>
+<hr/>
+<h3 id="numerical-methods-for-solving-the-equations-of-motion">Numerical Methods for Solving the Equations of Motion</h3>
+<p>The motion of a charged particle under the Lorentz force is governed by:</p>
+<div class="arithmatex">\[
+\frac{d\vec{v}}{dt} = \frac{q}{m}(\vec{E} + \vec{v} \times \vec{B}), \quad \frac{d\vec{r}}{dt} = \vec{v}
+\]</div>
+<p>To solve this system numerically, we discretize time into small intervals and approximate derivatives using finite differences. Two commonly used methods are:</p>
+<hr/>
+<h3 id="1-euler-method">1. Euler Method</h3>
+<p>The Euler method is the simplest numerical approach to integrate ordinary differential equations. It updates the velocity and position linearly using the derivative at the current time step:</p>
+<div class="arithmatex">\[
+\vec{v}_{n+1} = \vec{v}_n + \frac{q}{m}(\vec{E} + \vec{v}_n \times \vec{B}) \, \Delta t
+\]</div>
+<div class="arithmatex">\[
+\vec{r}_{n+1} = \vec{r}_n + \vec{v}_n \, \Delta t
+\]</div>
+<ul>
+<li><strong>Advantages:</strong> Simple and easy to implement.  </li>
+<li><strong>Disadvantages:</strong> Low accuracy; errors can accumulate quickly, especially in long simulations or rapidly changing fields.</li>
+</ul>
+<hr/>
+<h3 id="2-runge-kutta-method-4th-order-rk4">2. Runge-Kutta Method (4th Order, RK4)</h3>
+<p>The Runge-Kutta 4th order method improves on the Euler method by evaluating the derivatives multiple times within each step and taking a weighted average. It provides significantly better accuracy, even with larger time steps.</p>
+<p>For velocity and position updates:</p>
+<div class="arithmatex">\[
+\vec{v}_{n+1} = \vec{v}_n + \frac{1}{6}(k_1 + 2k_2 + 2k_3 + k_4)
+\]</div>
+<div class="arithmatex">\[
+\vec{r}_{n+1} = \vec{r}_n + \frac{1}{6}(l_1 + 2l_2 + 2l_3 + l_4)
+\]</div>
+<h2 id="exploration-of-applications">Exploration of Applications</h2>
+<p>The Lorentz force plays a crucial role in a wide range of physical systems and technologies:</p>
+<h3 id="1-particle-accelerators">1. Particle Accelerators</h3>
+<p>In devices such as <strong>cyclotrons</strong> and <strong>synchrotrons</strong>, charged particles are accelerated using electric fields and steered using magnetic fields. The magnetic component of the Lorentz force causes particles to travel in circular or spiral paths, allowing for repeated acceleration and high energy levels.</p>
+<h3 id="2-mass-spectrometers">2. Mass Spectrometers</h3>
+<p>These instruments separate ions based on their mass-to-charge ratio. As ions move through a magnetic field, the Lorentz force deflects their path. Lighter ions are deflected more than heavier ones, allowing for identification based on the curvature of their trajectory.</p>
+<h3 id="3-plasma-confinement-fusion-reactors">3. Plasma Confinement (Fusion Reactors)</h3>
+<p>In magnetic confinement fusion devices like <strong>tokamaks</strong>, magnetic fields are used to control hot, ionized gases (plasmas). The Lorentz force acts on the charged particles in the plasma, guiding and containing them in complex magnetic field configurations to prevent contact with reactor walls.</p>
+<hr/>
+<h2 id="relevance-of-electric-and-magnetic-fields">Relevance of Electric and Magnetic Fields</h2>
+<ul>
+<li>
+<p><strong>Electric Fields (E):</strong> These are used to accelerate charged particles. A particle in an electric field experiences a force in the direction of the field (for positive charges) or opposite (for negative charges). This is essential for initiating and maintaining motion.</p>
+</li>
+<li>
+<p><strong>Magnetic Fields (B):</strong> Magnetic fields influence the <strong>direction</strong> of motion rather than speed, due to the perpendicular nature of the <strong>v × B</strong> term. This results in circular or helical trajectories, enabling control over particle paths without necessarily altering their kinetic energy.</p>
+</li>
+</ul>
+<p>Together, electric and magnetic fields allow for precise manipulation of charged particles in both research and technology, from probing atomic structures to achieving nuclear fusion.</p>
+<hr/>
+<p><img alt="alt text" src="../image.png"/></p>
+<p><img alt="alt text" src="../image-1.png"/></p>
+<p><img alt="alt text" src="../image-2.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
