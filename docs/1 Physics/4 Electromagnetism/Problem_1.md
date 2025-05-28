@@ -43,7 +43,7 @@ $$
 r_L = \frac{mv_\perp}{qB}
 $$
 
-Where ($ v_\perp $) is the component of velocity perpendicular to the magnetic field.
+Where $( v_\perp )$ is the component of velocity perpendicular to the magnetic field.
 
 #### Cyclotron Frequency
 
