@@ -86,28 +86,6 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#estimating-pi-using-monte-carlo-methods">Estimating Pi using Monte Carlo Methods</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#circle-method-visualization">Circle Method Visualization:</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#understanding-the-methods">Understanding the Methods</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#results">Results:</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#buffons-needle-visualization">Buffon's Needle Visualization:</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#understanding-the-methods_1">Understanding the Methods</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#results_1">Results:</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#method-comparison">Method Comparison:</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#convergence-analysis">Convergence Analysis:</a>
-</li>
 </ul>
 </li>
 </ul>
@@ -194,7 +172,52 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
-<h2 id="estimating-pi-using-monte-carlo-methods">Estimating Pi using Monte Carlo Methods</h2>
+<h1 id="estimating-pi-using-monte-carlo-methods">Estimating <span class="arithmatex">\(\pi\)</span> Using Monte Carlo Methods</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Monte Carlo methods are <strong>probabilistic simulation techniques</strong> used to estimate unknown values through repeated random sampling. One of the most famous applications is estimating the value of <span class="arithmatex">\(\pi\)</span>.</p>
+<hr/>
+<h2 id="geometric-interpretation">Geometric Interpretation</h2>
+<p>The basic idea involves <strong>randomly sampling points</strong> in a 2D space and using geometry to estimate <span class="arithmatex">\(\pi\)</span>.</p>
+<h3 id="setup">Setup:</h3>
+<ul>
+<li>Imagine a <strong>square</strong> of side length 2, centered at the origin:<br/>
+<span class="arithmatex">\(x \in [-1, 1]\)</span>, <span class="arithmatex">\(y \in [-1, 1]\)</span></li>
+<li>Inside this square, inscribe a <strong>circle of radius 1</strong> (also centered at the origin).</li>
+<li>The <strong>area of the square</strong> is:<br/>
+<span class="arithmatex">\(<span class="arithmatex">\(A_{\text{square}} = 2 \times 2 = 4\)</span>\)</span></li>
+<li>The <strong>area of the circle</strong> is:<br/>
+<span class="arithmatex">\(<span class="arithmatex">\(A_{\text{circle}} = \pi r^2 = \pi \cdot 1^2 = \pi\)</span>\)</span></li>
+</ul>
+<hr/>
+<h2 id="monte-carlo-estimation-procedure">Monte Carlo Estimation Procedure</h2>
+<h3 id="step-by-step">Step-by-step:</h3>
+<ol>
+<li>Randomly generate <strong><span class="arithmatex">\(n\)</span> points</strong> <span class="arithmatex">\((x, y)\)</span>, where <span class="arithmatex">\(x, y \in [-1, 1]\)</span>.</li>
+<li>Count how many points fall <strong>inside the circle</strong>, i.e., those that satisfy:<br/>
+<span class="arithmatex">\(<span class="arithmatex">\(x^2 + y^2 \leq 1\)</span>\)</span></li>
+<li>The ratio of points inside the circle to total points approximates the ratio of the areas:<br/>
+<span class="arithmatex">\(<span class="arithmatex">\(\frac{\text{points in circle}}{\text{total points}} \approx \frac{\text{area of circle}}{\text{area of square}} = \frac{\pi}{4}\)</span>\)</span></li>
+<li>Multiply by 4 to estimate <span class="arithmatex">\(\pi\)</span>:<br/>
+<span class="arithmatex">\(<span class="arithmatex">\(\pi \approx 4 \cdot \frac{\text{points in circle}}{\text{total points}}\)</span>\)</span></li>
+</ol>
+<hr/>
+<h2 id="why-it-works">Why It Works</h2>
+<ul>
+<li>This method leverages the <strong>law of large numbers</strong>: as the number of samples increases, the estimate converges to the true value.</li>
+<li>The randomness introduces <strong>statistical noise</strong>, but this noise decreases as sample size grows.</li>
+</ul>
+<hr/>
+<h2 id="advantages">Advantages</h2>
+<ul>
+<li>Simple to implement.</li>
+<li>Can be generalized to estimate other areas or integrals in higher dimensions.</li>
+</ul>
+<h2 id="limitations">Limitations</h2>
+<ul>
+<li>Convergence is slow — high precision requires a large number of samples.</li>
+<li>Not suitable for deterministic or high-precision applications unless heavily optimized.</li>
+</ul>
+<hr/>
 <h3 id="circle-method-visualization">Circle Method Visualization:</h3>
 <p><img alt="alt text" src="../image-7.png"/></p>
 <h3 id="understanding-the-methods">Understanding the Methods</h3>
