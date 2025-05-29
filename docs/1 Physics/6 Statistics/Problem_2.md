@@ -1,5 +1,60 @@
 # Problem 2
-## Estimating Pi using Monte Carlo Methods
+
+# Estimating $\pi$ Using Monte Carlo Methods
+
+## Introduction
+
+Monte Carlo methods are **probabilistic simulation techniques** used to estimate unknown values through repeated random sampling. One of the most famous applications is estimating the value of $\pi$.
+
+---
+
+## Geometric Interpretation
+
+The basic idea involves **randomly sampling points** in a 2D space and using geometry to estimate $\pi$.
+
+### Setup:
+- Imagine a **square** of side length 2, centered at the origin:  
+  $x \in [-1, 1]$, $y \in [-1, 1]$
+- Inside this square, inscribe a **circle of radius 1** (also centered at the origin).
+- The **area of the square** is:  
+  $$A_{\text{square}} = 2 \times 2 = 4$$
+- The **area of the circle** is:  
+  $$A_{\text{circle}} = \pi r^2 = \pi \cdot 1^2 = \pi$$
+
+---
+
+## Monte Carlo Estimation Procedure
+
+### Step-by-step:
+
+1. Randomly generate **$n$ points** $(x, y)$, where $x, y \in [-1, 1]$.
+2. Count how many points fall **inside the circle**, i.e., those that satisfy:  
+   $$x^2 + y^2 \leq 1$$
+3. The ratio of points inside the circle to total points approximates the ratio of the areas:  
+   $$\frac{\text{points in circle}}{\text{total points}} \approx \frac{\text{area of circle}}{\text{area of square}} = \frac{\pi}{4}$$
+4. Multiply by 4 to estimate $\pi$:  
+   $$\pi \approx 4 \cdot \frac{\text{points in circle}}{\text{total points}}$$
+
+---
+
+## Why It Works
+
+- This method leverages the **law of large numbers**: as the number of samples increases, the estimate converges to the true value.
+- The randomness introduces **statistical noise**, but this noise decreases as sample size grows.
+
+---
+
+## Advantages
+
+- Simple to implement.
+- Can be generalized to estimate other areas or integrals in higher dimensions.
+
+## Limitations
+
+- Convergence is slow — high precision requires a large number of samples.
+- Not suitable for deterministic or high-precision applications unless heavily optimized.
+
+---
 ### Circle Method Visualization:
 
 ![alt text](image-7.png)
