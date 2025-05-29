@@ -86,6 +86,28 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#estimating-pi-using-monte-carlo-methods">Estimating Pi using Monte Carlo Methods</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#circle-method-visualization">Circle Method Visualization:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#understanding-the-methods">Understanding the Methods</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#results">Results:</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#buffons-needle-visualization">Buffon's Needle Visualization:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#understanding-the-methods_1">Understanding the Methods</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#results_1">Results:</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#method-comparison">Method Comparison:</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#convergence-analysis">Convergence Analysis:</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -172,6 +194,59 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h2 id="estimating-pi-using-monte-carlo-methods">Estimating Pi using Monte Carlo Methods</h2>
+<h3 id="circle-method-visualization">Circle Method Visualization:</h3>
+<p><img alt="alt text" src="../image-7.png"/></p>
+<h3 id="understanding-the-methods">Understanding the Methods</h3>
+<p><strong>Circle Method Theory:</strong></p>
+<p><strong><em>Geometric Principle:</em></strong> A unit circle inscribed in a 2×2 square has:</p>
+<p>Circle area = π × 1² = π</p>
+<p>Square area = 2 × 2 = 4</p>
+<p>Ratio = π/4</p>
+<p><strong><em>Monte Carlo Estimation:</em></strong> Generate random points in the square. 
+ Count points inside the circle (x² + y² ≤ 1)
+π ≈ 4 × (points inside / total points)</p>
+<h2 id="results">Results:</h2>
+<p><img alt="alt text" src="../image-10.png"/></p>
+<h3 id="buffons-needle-visualization">Buffon's Needle Visualization:</h3>
+<p><img alt="alt text" src="../image-9.png"/></p>
+<h3 id="understanding-the-methods_1">Understanding the Methods</h3>
+<h4 id="geometric-setup">Geometric Setup</h4>
+<ul>
+<li><strong>Parallel Lines</strong>: The plane has parallel lines separated by a distance of 2.0 units.</li>
+<li><strong>Needles</strong>: Each needle has a length of 1.0 unit and is dropped randomly.</li>
+<li><strong>Randomization</strong>: Each needle has a random position (center) and angle relative to the lines.</li>
+</ul>
+<h4 id="crossing-probability">Crossing Probability</h4>
+<ul>
+<li>A needle crosses a line if it spans across the line boundary.</li>
+<li>For a needle of length <span class="arithmatex">\( L \)</span> and line separation <span class="arithmatex">\( d \)</span>, the theoretical probability of a needle crossing a line is:
+  [
+  P = \frac{2L}{\pi d}
+  ]</li>
+<li>In this setup: <span class="arithmatex">\( L = 1.0 \)</span>, <span class="arithmatex">\( d = 2.0 \)</span>, so:
+  [
+  P = \frac{2 \times 1.0}{\pi \times 2.0} = \frac{1}{\pi}
+  ]</li>
+</ul>
+<h4 id="estimation">π Estimation</h4>
+<ul>
+<li>The value of π can be estimated using the formula:
+  [
+  \pi \approx \frac{2 \times \text{needle length} \times \text{total drops}}{\text{line distance} \times \text{crossings}}
+  ]</li>
+<li>For the current setup (<span class="arithmatex">\( L = 1.0 \)</span>, <span class="arithmatex">\( d = 2.0 \)</span>):
+  [
+  \pi \approx \frac{2 \times 1.0 \times n}{2.0 \times \text{crossings}} = \frac{n}{\text{crossings}}
+  ]</li>
+<li>As the number of needle drops increases, the estimate converges to the true value of π.</li>
+</ul>
+<h2 id="results_1">Results:</h2>
+<p><img alt="alt text" src="../image-11.png"/></p>
+<h2 id="method-comparison">Method Comparison:</h2>
+<p><img alt="alt text" src="../image-12.png"/></p>
+<h2 id="convergence-analysis">Convergence Analysis:</h2>
+<p><img alt="alt text" src="../image-13.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
