@@ -222,13 +222,30 @@
 <p><img alt="alt text" src="../image-7.png"/></p>
 <h3 id="understanding-the-methods">Understanding the Methods</h3>
 <p><strong>Circle Method Theory:</strong></p>
-<p><strong><em>Geometric Principle:</em></strong> A unit circle inscribed in a 2×2 square has:</p>
-<p>Circle area = π × 1² = π</p>
-<p>Square area = 2 × 2 = 4</p>
-<p>Ratio = π/4</p>
-<p><strong><em>Monte Carlo Estimation:</em></strong> Generate random points in the square. 
- Count points inside the circle (x² + y² ≤ 1)
-π ≈ 4 × (points inside / total points)</p>
+<p><strong><em>Geometric Principle:</em></strong></p>
+<p>A unit circle inscribed in a <span class="arithmatex">\(2 \times 2\)</span> square has:</p>
+<ul>
+<li>
+<p>Circle area:<br/>
+<span class="arithmatex">\(<span class="arithmatex">\(\text{Area}_{\text{circle}} = \pi \times 1^2 = \pi\)</span>\)</span></p>
+</li>
+<li>
+<p>Square area:<br/>
+<span class="arithmatex">\(<span class="arithmatex">\(\text{Area}_{\text{square}} = 2 \times 2 = 4\)</span>\)</span></p>
+</li>
+<li>
+<p>Ratio of areas:<br/>
+<span class="arithmatex">\(<span class="arithmatex">\(\frac{\text{Area}_{\text{circle}}}{\text{Area}_{\text{square}}} = \frac{\pi}{4}\)</span>\)</span></p>
+</li>
+</ul>
+<p><strong><em>Monte Carlo Estimation:</em></strong></p>
+<ul>
+<li>Generate random points in the square: <span class="arithmatex">\(x, y \in [-1, 1]\)</span></li>
+<li>Count how many fall inside the unit circle:<br/>
+<span class="arithmatex">\(<span class="arithmatex">\(x^2 + y^2 \leq 1\)</span>\)</span></li>
+<li>Estimate <span class="arithmatex">\(\pi\)</span> using:<br/>
+<span class="arithmatex">\(<span class="arithmatex">\(\pi \approx 4 \times \frac{\text{points inside circle}}{\text{total points}}\)</span>\)</span></li>
+</ul>
 <h2 id="results">Results:</h2>
 <p><img alt="alt text" src="../image-10.png"/></p>
 <h3 id="buffons-needle-visualization">Buffon's Needle Visualization:</h3>
@@ -238,31 +255,25 @@
 <ul>
 <li><strong>Parallel Lines</strong>: The plane has parallel lines separated by a distance of 2.0 units.</li>
 <li><strong>Needles</strong>: Each needle has a length of 1.0 unit and is dropped randomly.</li>
-<li><strong>Randomization</strong>: Each needle has a random position (center) and angle relative to the lines.</li>
+<li><strong>Randomization</strong>: Each needle has a random position (center) and a random angle relative to the lines.</li>
 </ul>
+<hr/>
 <h4 id="crossing-probability">Crossing Probability</h4>
 <ul>
 <li>A needle crosses a line if it spans across the line boundary.</li>
-<li>For a needle of length <span class="arithmatex">\( L \)</span> and line separation <span class="arithmatex">\( d \)</span>, the theoretical probability of a needle crossing a line is:
-  [
-  P = \frac{2L}{\pi d}
-  ]</li>
-<li>In this setup: <span class="arithmatex">\( L = 1.0 \)</span>, <span class="arithmatex">\( d = 2.0 \)</span>, so:
-  [
-  P = \frac{2 \times 1.0}{\pi \times 2.0} = \frac{1}{\pi}
-  ]</li>
+<li>For a needle of length <span class="arithmatex">\(L\)</span> and line separation <span class="arithmatex">\(d\)</span>, the theoretical probability of a needle crossing a line is:<br/>
+<span class="arithmatex">\(<span class="arithmatex">\(P = \frac{2L}{\pi d}\)</span>\)</span></li>
+<li>In this setup, <span class="arithmatex">\(L = 1.0\)</span> and <span class="arithmatex">\(d = 2.0\)</span>, so:<br/>
+<span class="arithmatex">\(<span class="arithmatex">\(P = \frac{2 \times 1.0}{\pi \times 2.0} = \frac{1}{\pi}\)</span>\)</span></li>
 </ul>
-<h4 id="estimation">π Estimation</h4>
+<hr/>
+<h4 id="pi-estimation"><span class="arithmatex">\(\pi\)</span> Estimation</h4>
 <ul>
-<li>The value of π can be estimated using the formula:
-  [
-  \pi \approx \frac{2 \times \text{needle length} \times \text{total drops}}{\text{line distance} \times \text{crossings}}
-  ]</li>
-<li>For the current setup (<span class="arithmatex">\( L = 1.0 \)</span>, <span class="arithmatex">\( d = 2.0 \)</span>):
-  [
-  \pi \approx \frac{2 \times 1.0 \times n}{2.0 \times \text{crossings}} = \frac{n}{\text{crossings}}
-  ]</li>
-<li>As the number of needle drops increases, the estimate converges to the true value of π.</li>
+<li>The value of <span class="arithmatex">\(\pi\)</span> can be estimated using the formula:<br/>
+<span class="arithmatex">\(<span class="arithmatex">\(\pi \approx \frac{2 \times \text{needle length} \times \text{total drops}}{\text{line distance} \times \text{crossings}}\)</span>\)</span></li>
+<li>For the current setup (<span class="arithmatex">\(L = 1.0\)</span>, <span class="arithmatex">\(d = 2.0\)</span>):<br/>
+<span class="arithmatex">\(<span class="arithmatex">\(\pi \approx \frac{2 \times 1.0 \times n}{2.0 \times \text{crossings}} = \frac{n}{\text{crossings}}\)</span>\)</span></li>
+<li>As the number of needle drops increases, the estimate converges to the true value of <span class="arithmatex">\(\pi\)</span>.</li>
 </ul>
 <h2 id="results_1">Results:</h2>
 <p><img alt="alt text" src="../image-11.png"/></p>
