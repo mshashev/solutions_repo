@@ -37,16 +37,16 @@ Complex circuits combine series and parallel configurations. Simplification invo
 1. Identifying series or parallel subnetworks.
 2. Combining series resistors by addition.
 3. Combining parallel resistors using the reciprocal rule.
-4. Repeating until a single $ R_{eq} $ is obtained.
+4. Repeating until a single $R_{eq}$ is obtained.
 
 ### 5. **Ohm's Law**
-Ohm's Law ($ V = IR $) is fundamental:
+Ohm's Law ($V = IR$) is fundamental:
 - In series, voltage divides proportionally to resistance.
 - In parallel, current divides inversely proportional to resistance.
 - The equivalent resistance enables calculation of total current or voltage.
 
 ### 6. **Practical Considerations**
-- **Applications**: Simplified circuits aid in calculating total current, power ($ P = I^2 R $), or designing circuits with specific properties.
+- **Applications**: Simplified circuits aid in calculating total current, power ($P = I^2 R$), or designing circuits with specific properties.
 - **Assumptions**: Simplification assumes ideal resistors with linear behavior and no frequency-dependent effects (e.g., in AC circuits).
 - **Advanced Techniques**: For non-series-parallel networks, methods like Kirchhoff's Laws or Delta-Star transformations may be required.
 
