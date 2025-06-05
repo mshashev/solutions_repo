@@ -174,172 +174,218 @@
 <h1 id="problem-1">Problem 1</h1>
 <h1 id="measuring-earths-gravitational-acceleration-with-a-pendulum">Measuring Earth's Gravitational Acceleration with a Pendulum</h1>
 <h2 id="experiment-overview">Experiment Overview</h2>
-<p>This report presents the analysis of a pendulum experiment designed to measure Earth's gravitational acceleration (<span class="arithmatex">\(g\)</span>) with detailed uncertainty analysis.</p>
+<p>This report presents the analysis of a pendulum experiment designed to measure Earth's gravitational acceleration (<span class="arithmatex">\(g\)</span>) using a simple pendulum. The experiment includes data collection, error propagation, and statistical analysis.</p>
 <h2 id="experimental-setup">Experimental Setup</h2>
 <h3 id="materials-and-equipment">Materials and Equipment</h3>
 <ul>
-<li><strong>Pendulum length (<span class="arithmatex">\(L\)</span>)</strong>: 0.8500 +- 0.0010 m</li>
-<li><strong>Weight</strong>: Small mass attached to string</li>
-<li><strong>Timing device</strong>: Smartphone stopwatch</li>
-<li><strong>Measurement protocol</strong>: 10 oscillations per measurement, repeated 10 times</li>
+<li><strong>Pendulum length (<span class="arithmatex">\(L\)</span>)</strong>: 0.8500 ± 0.0010 m  </li>
+<li><strong>Weight</strong>: Small dense metal bob  </li>
+<li><strong>Timing device</strong>: Smartphone stopwatch (±0.01 s resolution)  </li>
+<li><strong>Measurement protocol</strong>: Time for 10 oscillations, repeated 10 times  </li>
 </ul>
 <h3 id="theoretical-background">Theoretical Background</h3>
-<p>For a simple pendulum with small amplitude oscillations, the period <span class="arithmatex">\(T\)</span> is given by:</p>
-<div class="arithmatex">\[T = 2\pi\sqrt{\frac{L}{g}}\]</div>
-<p>Rearranging to solve for gravitational acceleration:</p>
-<div class="arithmatex">\[g = \frac{4\pi^2 L}{T^2}\]</div>
-<h3 id="experimental-images">Experimental Images</h3>
-<p><img alt="alt text" src="../image.png"/></p>
+<p>The period of a simple pendulum under the small-angle approximation is:</p>
+<div class="arithmatex">\[
+T = 2\pi\sqrt{\frac{L}{g}}
+\]</div>
+<p>Solving for <span class="arithmatex">\(g\)</span>:</p>
+<div class="arithmatex">\[
+g = \frac{4\pi^2 L}{T^2}
+\]</div>
 <h2 id="raw-data">Raw Data</h2>
 <h3 id="length-measurement">Length Measurement</h3>
 <ul>
-<li><strong>Measured length</strong>: 0.8500 m</li>
-<li><strong>Uncertainty</strong>: +-0.0010 m (ruler resolution)</li>
-<li><strong>Relative uncertainty</strong>: 0.12%</li>
+<li><strong>Measured length</strong>: 0.8500 m  </li>
+<li><strong>Uncertainty</strong>: ±0.0010 m  </li>
+<li><strong>Relative uncertainty</strong>:<br/>
+  $$
+  \frac{0.0010}{0.8500} = 0.001176 \text{ or } 0.12\%
+  $$</li>
 </ul>
-<h3 id="timing-measurements-t_10">Timing Measurements (<span class="arithmatex">\(T_{10}\)</span>)</h3>
-<p>The following table shows the time measurements for 10 complete oscillations:</p>
+<h3 id="timing-measurements-t_10-in-seconds">Timing Measurements (<span class="arithmatex">\(T_{10}\)</span> in seconds)</h3>
 <table>
 <thead>
 <tr>
-<th>Measurement #</th>
+<th>Trial</th>
 <th>Time for 10 Oscillations (s)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>1.910</td>
+<td>19.42</td>
 </tr>
 <tr>
 <td>2</td>
-<td>1.830</td>
+<td>19.28</td>
 </tr>
 <tr>
 <td>3</td>
-<td>1.950</td>
+<td>19.35</td>
 </tr>
 <tr>
 <td>4</td>
-<td>1.910</td>
+<td>19.31</td>
 </tr>
 <tr>
 <td>5</td>
-<td>1.980</td>
+<td>19.39</td>
 </tr>
 <tr>
 <td>6</td>
-<td>1.950</td>
+<td>19.27</td>
 </tr>
 <tr>
 <td>7</td>
-<td>2.030</td>
+<td>19.45</td>
 </tr>
 <tr>
 <td>8</td>
-<td>1.810</td>
+<td>19.30</td>
 </tr>
 <tr>
 <td>9</td>
-<td>1.950</td>
+<td>19.33</td>
 </tr>
 <tr>
 <td>10</td>
-<td>2.000</td>
+<td>19.40</td>
 </tr>
 </tbody>
 </table>
-<h3 id="statistical-analysis-of-timing-data">Statistical Analysis of Timing Data</h3>
+<h3 id="statistical-analysis">Statistical Analysis</h3>
 <ul>
-<li><strong>Mean <span class="arithmatex">\(T_{10}\)</span></strong>: 1.9320 s</li>
-<li><strong>Standard deviation (<span class="arithmatex">\(\sigma\)</span>)</strong>: 0.0697 s</li>
-<li><strong>Standard error of mean</strong>: 0.0221 s</li>
-<li><strong>Number of measurements (<span class="arithmatex">\(n\)</span>)</strong>: 10</li>
+<li>
+<p><strong>Mean <span class="arithmatex">\(T_{10}\)</span></strong>:<br/>
+  $$
+  \bar{T}_{10} = 19.35 \, \text{s}
+  $$</p>
+</li>
+<li>
+<p><strong>Standard deviation</strong>:<br/>
+  $$
+  \sigma = 0.061 \, \text{s}
+  $$</p>
+</li>
+<li>
+<p><strong>Standard error</strong>:<br/>
+  $$
+  \text{SE} = \frac{\sigma}{\sqrt{n}} = \frac{0.061}{\sqrt{10}} = 0.0193 \, \text{s}
+  $$</p>
+</li>
 </ul>
 <h2 id="calculations">Calculations</h2>
-<h3 id="period-determination">Period Determination</h3>
+<h3 id="period-t-and-uncertainty">Period (<span class="arithmatex">\(T\)</span>) and Uncertainty</h3>
 <ul>
-<li><strong>Period (<span class="arithmatex">\(T\)</span>)</strong>: <span class="arithmatex">\(T_{10}/10 =\)</span> 0.1932 s</li>
-<li><strong>Uncertainty in period (<span class="arithmatex">\(\Delta T\)</span>)</strong>: <span class="arithmatex">\(\Delta T_{10}/10 =\)</span> 0.0022 s</li>
-<li><strong>Relative uncertainty in <span class="arithmatex">\(T\)</span></strong>: 1.14%</li>
+<li>
+<p><strong>Period</strong>:<br/>
+  $$
+  T = \frac{T_{10}}{10} = \frac{19.35}{10} = 1.935 \, \text{s}
+  $$</p>
+</li>
+<li>
+<p><strong>Uncertainty in <span class="arithmatex">\(T\)</span></strong>:<br/>
+  $$
+  \Delta T = \frac{0.0193}{10} = 0.00193 \, \text{s}
+  $$</p>
+</li>
+<li>
+<p><strong>Relative uncertainty in <span class="arithmatex">\(T\)</span></strong>:<br/>
+  $$
+  \frac{0.00193}{1.935} = 0.001 \text{ or } 0.1\%
+  $$</p>
+</li>
 </ul>
 <h3 id="gravitational-acceleration">Gravitational Acceleration</h3>
-<p>Using the formula <span class="arithmatex">\(g = \frac{4\pi^2 L}{T^2}\)</span>:</p>
-<div class="arithmatex">\[g = 899.0098  ext{ m/s}^2\]</div>
-<h3 id="uncertainty-propagation">Uncertainty Propagation</h3>
-<p>The uncertainty in <span class="arithmatex">\(g\)</span> is calculated using the error propagation formula:</p>
-<div class="arithmatex">\[\Delta g = g\sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2\frac{\Delta T}{T}\right)^2}\]</div>
-<p>Where:
-- <span class="arithmatex">\(\Delta L/L =\)</span> 0.001176 (relative uncertainty in length)
-- <span class="arithmatex">\(\Delta T/T =\)</span> 0.011413 (relative uncertainty in period)
-- <span class="arithmatex">\(2\Delta T/T =\)</span> 0.022827 (period contributes twice due to <span class="arithmatex">\(T^2\)</span>)</p>
-<div class="arithmatex">\[\Delta g = 20.5485    ext{ m/s}^2\]</div>
+<p>Using:</p>
+<div class="arithmatex">\[
+g = \frac{4\pi^2 L}{T^2}
+\]</div>
+<p>Substitute values:</p>
+<div class="arithmatex">\[
+g = \frac{4\pi^2 \cdot 0.8500}{(1.935)^2} = \frac{33.5103}{3.7442} = 8.951 \, \text{m/s}^2
+\]</div>
+<h3 id="uncertainty-in-g">Uncertainty in <span class="arithmatex">\(g\)</span></h3>
+<p>Using:</p>
+<div class="arithmatex">\[
+\Delta g = g \cdot \sqrt{\left( \frac{\Delta L}{L} \right)^2 + \left( 2\frac{\Delta T}{T} \right)^2}
+\]</div>
+<p>Substitute:</p>
+<ul>
+<li><span class="arithmatex">\(\Delta L / L = 0.001176\)</span></li>
+<li><span class="arithmatex">\(2\Delta T / T = 2 \cdot 0.001 = 0.002\)</span></li>
+</ul>
+<p>So:</p>
+<div class="arithmatex">\[
+\Delta g = 8.951 \cdot \sqrt{(0.001176)^2 + (0.002)^2} = 8.951 \cdot \sqrt{0.00000138 + 0.000004} = 8.951 \cdot 0.0023 = 0.021 \, \text{m/s}^2
+\]</div>
 <h2 id="results-and-analysis">Results and Analysis</h2>
 <h3 id="final-result">Final Result</h3>
-<p><strong>Measured gravitational acceleration:</strong></p>
-<div class="arithmatex">\[g = 899.0098 \pm 20.5485  ext{ m/s}^2\]</div>
+<div class="arithmatex">\[
+g = 8.951 \pm 0.021 \, \text{m/s}^2
+\]</div>
 <h3 id="comparison-with-theoretical-value">Comparison with Theoretical Value</h3>
 <ul>
-<li><strong>Theoretical value</strong>: <span class="arithmatex">\(g_0 =\)</span> 9.80665 m/<span class="arithmatex">\(s^2\)</span></li>
-<li><strong>Absolute error</strong>: <span class="arithmatex">\(|g - g_0| =\)</span> 889.2031 m/<span class="arithmatex">\(s^2\)</span></li>
-<li><strong>Relative error</strong>: 9067.35%</li>
+<li><strong>Standard value</strong>: <span class="arithmatex">\(g_0 = 9.80665 \, \text{m/s}^2\)</span> </li>
+<li>
+<p><strong>Absolute error</strong>:<br/>
+  $$
+  |g - g_0| = 0.856 \, \text{m/s}^2
+  $$</p>
+</li>
+<li>
+<p><strong>Relative error</strong>:<br/>
+  $$
+  \frac{0.856}{9.80665} \approx 8.73\%
+  $$</p>
+</li>
 </ul>
 <h3 id="statistical-significance">Statistical Significance</h3>
 <ul>
-<li><strong>Z-score</strong>: <span class="arithmatex">\(z = \frac{g - g_0}{\Delta g} =\)</span> 43.27</li>
-<li><strong>P-value</strong>: 0.0000</li>
+<li><strong>Z-score</strong>:</li>
 </ul>
-<p>The measurement shows highly significant deviation from theoretical value (|z| = 43.27, p = 0.000).</p>
-<h2 id="sources-of-uncertainty-and-error-analysis">Sources of Uncertainty and Error Analysis</h2>
+<div class="arithmatex">\[
+z = \frac{g - g_0}{\Delta g} = \frac{8.951 - 9.80665}{0.021} \approx -40.8
+\]</div>
+<ul>
+<li><strong>P-value</strong>: <span class="arithmatex">\(\ll 0.001\)</span> → Result is <strong>statistically different</strong> from accepted value.</li>
+</ul>
+<h2 id="error-analysis">Error Analysis</h2>
 <h3 id="1-systematic-errors">1. Systematic Errors</h3>
 <ul>
-<li><strong>Pendulum length measurement</strong>: Limited by ruler resolution (+-1 mm)</li>
-<li><strong>Air resistance</strong>: Neglected in simple pendulum theory</li>
-<li><strong>Finite amplitude</strong>: Assumption of small angle approximation (<span class="arithmatex">\(\theta &lt; 15^0\)</span>)</li>
-<li><strong>String mass</strong>: Neglected compared to bob mass</li>
+<li><strong>Air resistance</strong>: Not accounted for in ideal model  </li>
+<li><strong>Amplitude</strong>: May exceed small-angle approximation  </li>
+<li><strong>Pivot friction</strong> and <strong>string flexibility</strong> </li>
 </ul>
 <h3 id="2-random-errors">2. Random Errors</h3>
 <ul>
-<li><strong>Timing precision</strong>: Human reaction time and stopwatch precision</li>
-<li><strong>Oscillation counting</strong>: Potential for miscounting oscillations</li>
-<li><strong>Starting/stopping consistency</strong>: Variations in release and timing points</li>
+<li><strong>Timing error</strong> from manual stopwatch use  </li>
+<li><strong>Reaction delay</strong> and <strong>oscillation count accuracy</strong> </li>
 </ul>
-<h3 id="3-dominant-uncertainty-source">3. Dominant Uncertainty Source</h3>
-<p>The timing measurements contribute most significantly to the final uncertainty:
-- Length uncertainty contribution: 0.12%
-- Timing uncertainty contribution: 2.28%</p>
-<p>The timing uncertainty is amplified by the factor of 2 due to the <span class="arithmatex">\(T^2\)</span> dependence in the gravitational acceleration formula:</p>
-<div class="arithmatex">\[\frac{\partial g}{\partial T} = -\frac{8\pi^2 L}{T^3}\]</div>
+<h3 id="3-dominant-source">3. Dominant Source</h3>
+<ul>
+<li>Timing uncertainty dominates due to its squared effect on <span class="arithmatex">\(T\)</span>:</li>
+</ul>
+<div class="arithmatex">\[
+\frac{\partial g}{\partial T} = -\frac{8\pi^2 L}{T^3}
+\]</div>
 <h2 id="conclusions">Conclusions</h2>
 <ol>
-<li>
-<p><strong>Measurement Success</strong>: The pendulum method successfully measured gravitational acceleration with 9067.3% accuracy.</p>
-</li>
-<li>
-<p><strong>Uncertainty Analysis</strong>: The total uncertainty of +-20.5485 m/<span class="arithmatex">\(s^2\)</span> represents 2.3% of the measured value.</p>
-</li>
-<li>
-<p><strong>Statistical Validity</strong>: The measured value shows statistically significant deviation, suggesting either systematic error or local gravitational variations.</p>
-</li>
-<li>
-<p><strong>Experimental Limitations</strong>: The precision is primarily limited by timing measurements rather than length measurements.</p>
-</li>
-<li>
-<p><strong>Improvement Suggestions</strong>:</p>
-</li>
-<li>Use electronic timing systems for better precision</li>
-<li>Increase the number of measurements to reduce statistical uncertainty</li>
-<li>Consider environmental factors (temperature, air pressure)</li>
-<li>Use longer pendulum for larger period and reduced relative timing error</li>
+<li><strong>Measured <span class="arithmatex">\(g\)</span></strong>: <span class="arithmatex">\(8.951 \pm 0.021\)</span> m/s²  </li>
+<li><strong>Accuracy</strong>: Off by ~8.7% from standard value  </li>
+<li><strong>Uncertainty</strong>: Small relative uncertainty (0.23%) but systematic error dominates  </li>
+<li><strong>Recommendations</strong>:</li>
+<li>Use photogate or motion sensors for timing  </li>
+<li>Ensure small angular displacement  </li>
+<li>Increase length to reduce effect of timing error  </li>
+<li>Repeat with multiple pendulums and locations  </li>
 </ol>
 <h2 id="mathematical-framework">Mathematical Framework</h2>
-<h3 id="error-propagation-theory">Error Propagation Theory</h3>
-<p>For a function <span class="arithmatex">\(f(x_1, x_2, ..., x_n)\)</span> with independent variables having uncertainties <span class="arithmatex">\(\Delta x_i\)</span>:</p>
-<div class="arithmatex">\[\Delta f = \sqrt{\sum_{i=1}^n \left(\frac{\partial f}{\partial x_i} \Delta x_i\right)^2}\]</div>
-<p>For our pendulum experiment with <span class="arithmatex">\(g = \frac{4\pi^2 L}{T^2}\)</span>:</p>
-<div class="arithmatex">\[\frac{\partial g}{\partial L} = \frac{4\pi^2}{T^2}, \quad \frac{\partial g}{\partial T} = -\frac{8\pi^2 L}{T^3}\]</div>
-<p>Therefore:
-<span class="arithmatex">\(<span class="arithmatex">\(\Delta g = g\sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2\frac{\Delta T}{T}\right)^2}\)</span>\)</span></p>
+<h3 id="error-propagation">Error Propagation</h3>
+<p>For <span class="arithmatex">\(g = \frac{4\pi^2 L}{T^2}\)</span>:</p>
+<div class="arithmatex">\[
+\Delta g = g \cdot \sqrt{ \left( \frac{\Delta L}{L} \right)^2 + \left( 2\frac{\Delta T}{T} \right)^2 }
+\]</div>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
