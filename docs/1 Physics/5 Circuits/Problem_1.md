@@ -92,6 +92,8 @@ Ohm's Law ($V = IR$) is fundamental:
 ###  Final Equivalent Resistance
 - $R_{eq} = 15\,\Omega$ between B+ and B-
 
+![circuit_simplification (1)](https://github.com/user-attachments/assets/f2bcdc71-382b-447c-a395-a456eb39f179)
+
 
 ![alt text](series_simplification.gif)
 
