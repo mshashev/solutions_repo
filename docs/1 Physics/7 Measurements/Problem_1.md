@@ -8,7 +8,7 @@ This report presents the analysis of a pendulum experiment designed to measure E
 ## Experimental Setup
 
 ### Materials and Equipment
-- **Pendulum length ($L$)**: 0.8500 ± 0.0010 m
+- **Pendulum length ($L$)**: 0.8500 +- 0.0010 m
 - **Weight**: Small mass attached to string
 - **Timing device**: Smartphone stopwatch
 - **Measurement protocol**: 10 oscillations per measurement, repeated 10 times
@@ -61,8 +61,8 @@ The following table shows the time measurements for 10 complete oscillations:
 ## Calculations
 
 ### Period Determination
-- **Period ($T$)**: $T_{10}/10 = $ 0.1932 s
-- **Uncertainty in period ($\Delta T$)**: $\Delta T_{10}/10 = $ 0.0022 s
+- **Period ($T$)**: $T_{10}/10 =$ 0.1932 s
+- **Uncertainty in period ($\Delta T$)**: $\Delta T_{10}/10 =$ 0.0022 s
 - **Relative uncertainty in $T$**: 1.14%
 
 ### Gravitational Acceleration
@@ -78,9 +78,9 @@ The uncertainty in $g$ is calculated using the error propagation formula:
 $$\Delta g = g\sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2\frac{\Delta T}{T}\right)^2}$$
 
 Where:
-- $\Delta L/L = $ 0.001176 (relative uncertainty in length)
-- $\Delta T/T = $ 0.011413 (relative uncertainty in period)
-- $2\Delta T/T = $ 0.022827 (period contributes twice due to $T^2$)
+- $\Delta L/L =$ 0.001176 (relative uncertainty in length)
+- $\Delta T/T =$ 0.011413 (relative uncertainty in period)
+- $2\Delta T/T =$ 0.022827 (period contributes twice due to $T^2$)
 
 $$\Delta g = 20.5485 	ext{ m/s}^2$$
 
@@ -96,12 +96,12 @@ $$g = 899.0098 \pm 20.5485 	ext{ m/s}^2$$
 
 
 ### Comparison with Theoretical Value
-- **Theoretical value**: $g_0 = $ 9.80665 m/$s^2$
-- **Absolute error**: $|g - g_0| = $ 889.2031 m/$s^2$
+- **Theoretical value**: $g_0 =$ 9.80665 m/$s^2$
+- **Absolute error**: $|g - g_0| =$ 889.2031 m/$s^2$
 - **Relative error**: 9067.35%
 
 ### Statistical Significance
-- **Z-score**: $z = \frac{g - g_0}{\Delta g} = $ 43.27
+- **Z-score**: $z = \frac{g - g_0}{\Delta g} =$ 43.27
 - **P-value**: 0.0000
 
 The measurement shows highly significant deviation from theoretical value (|z| = 43.27, p = 0.000).
