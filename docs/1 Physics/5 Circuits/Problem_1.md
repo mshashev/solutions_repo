@@ -6,26 +6,26 @@
 ## Theoretical Background: Circuit Simplification
 
 ### 1. **Resistors in Electrical Circuits**
-Resistors are passive components that resist the flow of electric current, measured in ohms ($ \Omega $). Circuit simplification reduces a complex resistor network into a single equivalent resistance ($ R_{eq} $) between two terminals, facilitating analysis of current, voltage, or power.
+Resistors are passive components that resist the flow of electric current, measured in ohms ($\Omega$). Circuit simplification reduces a complex resistor network into a single equivalent resistance ($R_{eq}$) between two terminals, facilitating analysis of current, voltage, or power.
 
 ### 2. **Series Circuits**
 In a series circuit, resistors are connected end-to-end, forming a single current path. The equivalent resistance is the sum of individual resistances:
 
-$$ R_{eq} = R_1 + R_2 + R_3 + \dots + R_n $$
+$$R_{eq} = R_1 + R_2 + R_3 + \dots + R_n$$
 
 **Properties**:
 - The same current flows through all resistors.
-- The total voltage across the circuit is the sum of voltage drops across each resistor ($ V = IR $, per Ohm's Law).
+- The total voltage across the circuit is the sum of voltage drops across each resistor ($V = IR$, per Ohm's Law).
 - Simplification involves adding resistances along the path.
 
 ### 3. **Parallel Circuits**
 In a parallel circuit, resistors are connected across the same two nodes, sharing the same voltage. The equivalent resistance is calculated using:
 
-$$ \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \dots + \frac{1}{R_n} $$
+$$\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \dots + \frac{1}{R_n}$$
 
 For two resistors, this simplifies to:
 
-$$ R_{eq} = \frac{R_1 \cdot R_2}{R_1 + R_2} $$
+$$R_{eq} = \frac{R_1 \cdot R_2}{R_1 + R_2}$$
 
 **Properties**:
 - The voltage across each resistor is identical.
